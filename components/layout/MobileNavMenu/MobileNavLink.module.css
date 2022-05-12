@@ -1,0 +1,7 @@
+.link {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  height: 100%;
+}

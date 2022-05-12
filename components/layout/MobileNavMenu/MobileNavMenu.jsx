@@ -1,6 +1,12 @@
-import Link from 'next/link';
-
 import MobileNavLink from './MobileNavLink';
+
+import Calendar from '/public/icons/calendar.svg';
+import Camera from '/public/icons/camera.svg';
+import CreditCard from '/public/icons/creditcard.svg';
+import Home from '/public/icons/home.svg';
+import Pencil from '/public/icons/pencil.svg';
+import Person from '/public/icons/person.svg';
+import Phone from '/public/icons/phone.svg';
 
 import classes from './MobileNavMenu.module.css';
 
@@ -13,44 +19,26 @@ export default function MobileNavMenu({ toggleMenu }) {
         </svg>
       </button>
       <ul className={classes.navlist}>
-        <li>
-          <Link href="#">
-            <a>
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                ></path>
-              </svg>
-              Home
-            </a>
-          </Link>
+        <li className={classes.link_width}>
+          <MobileNavLink page="#" svg={<Home />} text="Home" />
         </li>
-        <li>
-          <Link href="#">About</Link>
+        <li className={classes.link_width + ' ' + classes.menu_color}>
+          <MobileNavLink page="#" svg={<Person />} text="About" />
         </li>
-        <li>
-          <Link href="#">Events</Link>
+        <li className={classes.link_width}>
+          <MobileNavLink page="#" svg={<Calendar />} text="Events" />
         </li>
-        <li>
-          <Link href="#">Blog</Link>
+        <li className={classes.link_width + ' ' + classes.menu_color}>
+          <MobileNavLink page="#" svg={<Pencil />} text="Blog" />
         </li>
-        <li>
-          <Link href="#">Contact</Link>
+        <li className={classes.link_width}>
+          <MobileNavLink page="#" svg={<Phone />} text="Contact" />
         </li>
-        <li>
-          <Link href="#">Media</Link>
+        <li className={classes.link_width + ' ' + classes.menu_color}>
+          <MobileNavLink page="#" svg={<Camera />} text="Media" />
         </li>
-        <li>
-          <Link href="#">Store</Link>
+        <li className={classes.link_width}>
+          <MobileNavLink page="#" svg={<CreditCard />} text="Store" />
         </li>
       </ul>
     </nav>
