@@ -1,0 +1,30 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navlinks {
+  display: grid;
+  margin-right: 2rem;
+  list-style: none;
+  grid-template-columns: repeat(7, fit-content);
+  gap: 30px;
+  padding: 0 0;
+  grid-auto-flow: column;
+  margin-top: 1em;
+}
+
+.mobilenav {
+  display: none;
+}
+
+@media (max-width: 694px) {
+  .navlinks {
+    display: none;
+  }
+
+  .mobilenav {
+    display: block;
+    margin: 1em 1em;
+  }
+}
