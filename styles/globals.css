@@ -23,3 +23,7 @@ svg {
   min-width: 0px;
   max-width: 75px;
 }
+
+nav {
+  align-self: baseline;
+}

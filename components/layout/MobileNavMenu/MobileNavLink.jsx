@@ -7,7 +7,7 @@ export default function MobileNavLink({ page, svg, text }) {
     <Link href={page}>
       <a className={classes.link}>
         <div>{svg}</div>
-        <div>{text}</div>
+        <div className={classes.text}>{text}</div>
       </a>
     </Link>
   );
