@@ -1,0 +1,12 @@
+.card {
+  text-align: center;
+  margin: 1em 1em;
+}
+
+.image {
+  max-width: clamp(300px, 33vw, 600px);
+}
+
+.content {
+  max-width: clamp(300px, 33vw, 600px);
+}

@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Card from '../../Card/Card';
 
 import classes from './About.module.css';
 
@@ -7,26 +6,13 @@ export default function About() {
   return (
     <section className={classes.about}>
       <h2 className={classes.about_title}>About Me</h2>
-      <div className={classes.image1}>
-        <Image
-          src="/test-picture2.jpg"
-          alt="black woman 2"
-          width={1000}
-          height={1000}
-          objectFit="contain"
-        />
+      <div className={classes.grid}>
+        <Card />
+        <Card />
+        <Card />
       </div>
-      <div className={classes.content}>
-        <h2 className={classes.about_title_larger}>About Me</h2>
-        <p className={classes.about_text}>
-          Joy Anjelica is an award-winning slam champion, open mic host, content
-          creator, closet Soundcloud rapper, and social media manager based out
-          of the DMV area.....
-        </p>
-
-        <Link href="#">
-          <button className={classes.more}>More</button>
-        </Link>
+      <div className={classes.button}>
+        <button>Come Learn Some More About Me!</button>
       </div>
     </section>
   );

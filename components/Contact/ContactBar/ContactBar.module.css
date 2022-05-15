@@ -1,0 +1,14 @@
+.contact {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; */
+  height: 20vh;
+  background-image: url('/test-picture3.jpg');
+  background-position: center center;
+}
+
+.image_wrapper {
+  height: inherit;
+  width: inherit;
+}
