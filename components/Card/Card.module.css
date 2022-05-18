@@ -1,12 +1,27 @@
 .card {
   text-align: center;
   margin: 1em 1em;
+  /* border: solid 1px black; */
 }
 
 .image {
-  max-width: clamp(300px, 33vw, 600px);
+  max-width: clamp(300px, 33vw, 400px);
+  display: flex;
 }
 
 .content {
-  max-width: clamp(300px, 33vw, 600px);
+  max-width: clamp(300px, 33vw, 400px);
+  margin: 0 0;
+  padding: 1em 1em;
+}
+
+.bottom {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom h3 {
+  margin: 0 0;
+  padding-top: 1em;
 }

@@ -1,12 +1,29 @@
 .about {
   width: 100%;
+  background-color: #fff;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about_title {
   text-align: center;
   margin: 0 0;
-  margin-top: 2em;
+  padding-top: 2em;
   margin-bottom: 1em;
+  text-transform: uppercase;
+  color: coral;
+  font-size: 13px;
+  letter-spacing: 0.23rem;
+}
+
+.title_content {
+  max-width: clamp(400px, 60%, 800px);
+  letter-spacing: 0.11rem;
+  line-height: 1.7rem;
 }
 
 .grid {
@@ -16,6 +33,37 @@
 }
 
 .button {
-  width: 226px;
+  width: 167px;
   margin: 0 auto;
+  padding-bottom: 1em;
+}
+
+.button button {
+  background: none;
+  border: solid black 1px;
+  padding: 10px 48px;
+  cursor: pointer;
+}
+
+.button button:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 685px) {
+  .mobile {
+    display: block;
+  }
+  .larger_screen {
+    display: none;
+  }
+}
+
+@media (min-width: 686px) {
+  .mobile {
+    display: none;
+  }
+  .larger_screen {
+    display: block;
+    margin: 0 15%;
+  }
 }

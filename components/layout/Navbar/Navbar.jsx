@@ -7,16 +7,14 @@ import classes from './Navbar.module.css';
 export default function Navbar() {
   return (
     <header className={classes.navbar}>
-      <Link href="/">
-        <Logo />
-      </Link>
+      <Logo />
       <nav>
         <ul className={classes.navlinks}>
           <li className={classes.links}>
-            <Link href="#">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li className={classes.links}>
-            <Link href="#">About</Link>
+            <Link href="/about">About</Link>
           </li>
           <li className={classes.links}>
             <Link href="#">Events</Link>
@@ -30,7 +28,7 @@ export default function Navbar() {
           <li className={classes.links}>
             <Link href="#">Media</Link>
           </li>
-          <li className={classes.links}>
+          <li className={classes.links + ' ' + classes.important}>
             <Link href="#">Store</Link>
           </li>
         </ul>

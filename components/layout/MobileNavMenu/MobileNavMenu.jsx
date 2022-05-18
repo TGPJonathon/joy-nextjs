@@ -20,25 +20,60 @@ export default function MobileNavMenu({ toggleMenu }) {
       </button>
       <ul className={classes.navlist}>
         <li className={classes.link_width}>
-          <MobileNavLink page="#" svg={<Home />} text="Home" />
+          <MobileNavLink
+            onClick={toggleMenu}
+            page="/"
+            svg={<Home />}
+            text="Home"
+          />
         </li>
         <li className={classes.link_width + ' ' + classes.menu_color}>
-          <MobileNavLink page="#" svg={<Person />} text="About" />
+          <MobileNavLink
+            onClick={toggleMenu}
+            page="/about"
+            svg={<Person />}
+            text="About"
+          />
         </li>
         <li className={classes.link_width}>
-          <MobileNavLink page="#" svg={<Calendar />} text="Events" />
+          <MobileNavLink
+            onClick={toggleMenu}
+            page="#"
+            svg={<Calendar />}
+            text="Events"
+          />
         </li>
         <li className={classes.link_width + ' ' + classes.menu_color}>
-          <MobileNavLink page="#" svg={<Pencil />} text="Blog" />
+          <MobileNavLink
+            onClick={toggleMenu}
+            page="#"
+            svg={<Pencil />}
+            text="Blog"
+          />
         </li>
         <li className={classes.link_width}>
-          <MobileNavLink page="#" svg={<Phone />} text="Contact" />
+          <MobileNavLink
+            onClick={toggleMenu}
+            page="#"
+            svg={<Phone />}
+            text="Contact"
+          />
         </li>
         <li className={classes.link_width + ' ' + classes.menu_color}>
-          <MobileNavLink page="#" svg={<Camera />} text="Media" />
+          <MobileNavLink
+            onClick={toggleMenu}
+            page="#"
+            svg={<Camera />}
+            text="Media"
+          />
         </li>
         <li className={classes.link_width}>
-          <MobileNavLink page="#" svg={<CreditCard />} text="Store" />
+          <MobileNavLink
+            onClick={toggleMenu}
+            page="#"
+            svg={<CreditCard />}
+            text="Store"
+          />
         </li>
       </ul>
     </nav>

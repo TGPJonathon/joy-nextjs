@@ -1,0 +1,42 @@
+.flex {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  align-items: center;
+  text-align: center;
+  padding-top: 2em;
+}
+
+.space {
+  margin-bottom: 1em;
+}
+
+.p_flex {
+  display: flex;
+}
+
+.margin {
+  margin-right: 1em;
+}
+
+.button {
+  background-color: white;
+  padding: 2px 28px;
+}
+
+.input {
+  border: solid 1px white;
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 694px) {
+  .flex {
+    flex-direction: column;
+  }
+  .p_flex {
+    text-align: center;
+    justify-content: center;
+  }
+}

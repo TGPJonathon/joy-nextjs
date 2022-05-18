@@ -2,4 +2,5 @@
   margin: 1rem 1rem;
   width: -moz-fit-content;
   width: fit-content;
+  font-size: clamp(1rem, 1vw, 2rem);
 }

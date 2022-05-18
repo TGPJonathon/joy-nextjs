@@ -1,0 +1,4 @@
+.carousel {
+  max-width: clamp(300px, 33vw, 500px);
+  margin: 0 auto;
+}

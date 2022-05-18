@@ -18,8 +18,19 @@
   margin-top: 1em;
 }
 
+.links {
+  font-size: clamp(1rem, 1vw, 2rem);
+}
+
 .mobilenav {
   display: none;
+}
+
+.important {
+  background-color: black;
+  border-radius: 50%;
+  padding: 0 1em;
+  color: white;
 }
 
 @media (max-width: 694px) {
@@ -29,6 +40,6 @@
 
   .mobilenav {
     display: block;
-    margin: 1em 1em;
+    /* margin: 1em 1em; */
   }
 }
