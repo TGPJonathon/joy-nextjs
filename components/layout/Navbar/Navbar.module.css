@@ -20,6 +20,7 @@
 
 .links {
   font-size: clamp(1rem, 1vw, 2rem);
+  color: white;
 }
 
 .mobilenav {

@@ -1,23 +1,22 @@
-.background_picture {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  z-index: -1;
-}
-
 .container {
   height: 100vh;
 }
 
-.background_picture img {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
+.buttons {
+  font-size: clamp(10px, 1vw, 2rem);
+  font-weight: 800;
+  display: flex;
 }
 
-.background_picture span {
-  height: inherit !important;
-  width: inherit !important;
+.buttons li {
+  padding: 0 clamp(5px, 2vw, 1rem);
+  list-style-type: none;
+  text-decoration: underline;
+}
+
+.buttons > li:first-of-type {
+  padding: 0 0;
+  padding-right: 15.5px;
 }
 
 .name {

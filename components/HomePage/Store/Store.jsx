@@ -5,7 +5,7 @@ export default function Store() {
   return (
     <section className={classes.flex}>
       <h2>Buy Some Stuff!</h2>
-      <button>Shop All</button>
+      <button>Come Browse And See My Merch!</button>
       <div className={classes.images}>
         <div className={classes.item}>
           <div className={classes.image}>

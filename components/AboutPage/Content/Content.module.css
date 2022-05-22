@@ -1,0 +1,41 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  margin: 4em clamp(2rem, 10%, 30em);
+  justify-content: space-around;
+  border-top: double;
+  border-bottom: double;
+}
+
+.left {
+  max-width: clamp(500px, 60%, 1500px);
+  margin: 2em 0;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+  justify-content: space-evenly;
+}
+
+.text {
+  line-height: 1.5em;
+}
+
+@media (max-width: 1049px) {
+  .right {
+    flex-direction: row;
+    margin-bottom: 1em;
+  }
+
+  .left {
+    margin: 0 0;
+  }
+}
+
+@media (max-width: 615px) {
+  .right {
+    flex-direction: column;
+  }
+}

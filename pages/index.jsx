@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <Fragment>
       <Hero />
-      <About />
+      {/* <About />
       <Event />
-      <Store />
+      <Store /> */}
     </Fragment>
   );
 }

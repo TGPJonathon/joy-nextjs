@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import HeroComponent from '../../Hero/HeroComponent';
 
 import Facebook from '../../../public/social_media_icons/facebook.svg';
 import Instagram from '../../../public/social_media_icons/instagram.svg';
@@ -10,14 +10,11 @@ import classes from './Hero.module.css';
 export default function Hero() {
   return (
     <section className={classes.container}>
-      <div className={classes.background_picture}>
-        <Image
-          src="/test-picture.jpg"
-          alt="black woman"
-          width={2000}
-          height={2000}
-        />
-      </div>
+      <HeroComponent
+        imageSrc="/test-picture.jpg"
+        alt="black woman"
+        pictureClass="background_picture"
+      />
 
       <section className={classes.name}>
         <h1 className={classes.text + ' ' + classes.title_text}>
@@ -26,7 +23,15 @@ export default function Hero() {
         <p className={classes.text + ' ' + classes.content_text}>
           poet. author. artist. creative.
         </p>
-        <div className={classes.svg}>
+        <ul className={classes.buttons}>
+          <li>About</li>
+          <li>Events</li>
+          <li>Blog</li>
+          <li>Contact</li>
+          <li>Media</li>
+          <li>Store</li>
+        </ul>
+        {/* <div className={classes.svg}>
           <svg
             preserveAspectRatio="xMidYMid meet"
             data-bbox="74.364 20.3 51.269 159.405"
@@ -44,7 +49,7 @@ export default function Hero() {
               data-color="1"
             ></path>
           </svg>
-        </div>
+        </div> */}
       </section>
       <section className={classes.socials}>
         <div className={classes.line + ' ' + classes.line_one}></div>

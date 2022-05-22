@@ -6,7 +6,7 @@ import classes from './Navbar.module.css';
 
 export default function Navbar() {
   return (
-    <header className={classes.navbar}>
+    <nav className={classes.navbar}>
       <Logo />
       <nav>
         <ul className={classes.navlinks}>
@@ -36,6 +36,6 @@ export default function Navbar() {
           <MobileNav />
         </div>
       </nav>
-    </header>
+    </nav>
   );
 }
