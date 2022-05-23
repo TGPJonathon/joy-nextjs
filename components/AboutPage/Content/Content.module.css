@@ -7,6 +7,24 @@
   border-bottom: double;
 }
 
+.header_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about_title {
+  text-align: center;
+  margin: 0 0;
+  padding-top: 2em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  color: coral;
+  font-size: 13px;
+  letter-spacing: 0.23rem;
+}
+
 .left {
   max-width: clamp(500px, 60%, 1500px);
   margin: 2em 0;
@@ -20,7 +38,7 @@
 }
 
 .text {
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 
 @media (max-width: 1049px) {

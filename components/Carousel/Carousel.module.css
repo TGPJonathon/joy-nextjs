@@ -1,4 +1,9 @@
 .carousel {
-  max-width: clamp(300px, 33vw, 500px);
-  margin: 0 auto;
+  margin: 0 20%;
+}
+
+@media (max-width: 500px) {
+  .carousel {
+    margin: 0 0;
+  }
 }

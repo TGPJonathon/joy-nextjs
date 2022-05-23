@@ -1,27 +1,53 @@
 .card {
   text-align: center;
   margin: 1em 1em;
-  /* border: solid 1px black; */
+  border: solid 1px black;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .image {
-  max-width: clamp(300px, 33vw, 400px);
   display: flex;
 }
 
 .content {
-  max-width: clamp(300px, 33vw, 400px);
+  max-width: clamp(300px, 50vw, 2000px);
   margin: 0 0;
   padding: 1em 1em;
+  text-align: justify;
+  align-self: center;
 }
 
-.bottom {
+.content,
+.datetime {
+  font-size: clamp(1rem, 1vw, 2rem);
+}
+
+.information {
   background-color: white;
   display: flex;
   flex-direction: column;
+  align-self: center;
+  width: 100%;
 }
 
 .bottom h3 {
   margin: 0 0;
   padding-top: 1em;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+@media (max-width: 1100px) {
+  .card {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    align-self: center;
+  }
 }

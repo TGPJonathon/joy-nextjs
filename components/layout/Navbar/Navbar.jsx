@@ -17,10 +17,10 @@ export default function Navbar() {
             <Link href="/about">About</Link>
           </li>
           <li className={classes.links}>
-            <Link href="#">Events</Link>
+            <Link href="/events">Events</Link>
           </li>
           <li className={classes.links}>
-            <Link href="#">Blog</Link>
+            <Link href="/blog">Blog</Link>
           </li>
           <li className={classes.links}>
             <Link href="#">Contact</Link>

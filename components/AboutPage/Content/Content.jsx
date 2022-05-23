@@ -70,9 +70,9 @@ export default function Content() {
         </div>
         <div className={classes.right}>
           <SideBar icon={<Trophy />} text="Award Winning Poet" />
-          <SideBar icon={<Trophy />} text="Award Winning Poet" />
-          <SideBar icon={<Trophy />} text="Award Winning Poet" />
-          <SideBar icon={<Trophy />} text="Award Winning Poet" />
+          <SideBar icon={<Trophy />} text="Amazing Host" />
+          <SideBar icon={<Trophy />} text="Activist" />
+          <SideBar icon={<Trophy />} text="Author" />
         </div>
       </section>
     </Fragment>

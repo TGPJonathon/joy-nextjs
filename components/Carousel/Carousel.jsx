@@ -11,7 +11,7 @@ export default function Carousel({ Cards }) {
     <section className={classes.carousel}>
       <Loop
         width="100%"
-        autoPlay
+        // autoPlay
         infiniteLoop
         showArrows={true}
         showThumbs={false}
@@ -19,11 +19,19 @@ export default function Carousel({ Cards }) {
         {Cards &&
           Cards.map((card, index) => (
             <div key={index}>
-              <Card
-                title={card.attributes.Title}
-                date={card.attributes.Time}
-                time={card.attributes.Time}
-              />
+              <a
+                target="_blank"
+                href="https://eventbrite.com"
+                rel="noopener noreferrer"
+              >
+                <Card
+                  title={card.attributes.Title}
+                  date={card.attributes.Time}
+                  time={card.attributes.Time}
+                  text={card.attributes.text}
+                  location={card.attributes.location}
+                />
+              </a>
             </div>
           ))}
       </Loop>

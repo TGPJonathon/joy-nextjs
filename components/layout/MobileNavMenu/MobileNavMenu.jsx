@@ -38,7 +38,7 @@ export default function MobileNavMenu({ toggleMenu }) {
         <li className={classes.link_width}>
           <MobileNavLink
             onClick={toggleMenu}
-            page="#"
+            page="/events"
             svg={<Calendar />}
             text="Events"
           />
@@ -46,7 +46,7 @@ export default function MobileNavMenu({ toggleMenu }) {
         <li className={classes.link_width + ' ' + classes.menu_color}>
           <MobileNavLink
             onClick={toggleMenu}
-            page="#"
+            page="/blog"
             svg={<Pencil />}
             text="Blog"
           />

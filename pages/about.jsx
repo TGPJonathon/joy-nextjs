@@ -1,5 +1,4 @@
 import { Fragment } from 'react';
-import Image from 'next/image';
 import HeroComponent from '../components/Hero/HeroComponent';
 import Content from '../components/AboutPage/Content/Content';
 

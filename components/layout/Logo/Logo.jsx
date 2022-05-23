@@ -7,7 +7,7 @@ import classes from './Logo.module.css';
 const Logo = forwardRef(() => {
   return (
     <div className={classes.logo}>
-      <Link href="#">J. Angelica</Link>
+      <Link href="/">J. Angelica</Link>
     </div>
   );
 });
