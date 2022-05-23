@@ -11,7 +11,7 @@ export default function Carousel({ Cards }) {
     <section className={classes.carousel}>
       <Loop
         width="100%"
-        // autoPlay
+        autoPlay
         infiniteLoop
         showArrows={true}
         showThumbs={false}

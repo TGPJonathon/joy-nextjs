@@ -1,7 +1,6 @@
 .card {
   text-align: center;
   margin: 1em 1em;
-  border: solid 1px black;
   display: flex;
   flex-wrap: nowrap;
 }
