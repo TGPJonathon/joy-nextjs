@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+}
+
+.title {
+  text-align: center;
+  margin: 2em 2em;
+}
+
+.top {
+  margin-bottom: 3em;
+}
+
+.bottom {
+  margin-bottom: 3em;
+}
+
+@media (max-width: 1206px) {
+  .mobile {
+    display: none;
+  }
+}

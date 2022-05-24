@@ -54,7 +54,7 @@ export default function MobileNavMenu({ toggleMenu }) {
         <li className={classes.link_width}>
           <MobileNavLink
             onClick={toggleMenu}
-            page="#"
+            page="/contact"
             svg={<Phone />}
             text="Contact"
           />

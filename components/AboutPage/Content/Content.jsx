@@ -10,12 +10,12 @@ export default function Content() {
     <Fragment>
       <header className={classes.header_content}>
         <h2 className={classes.about_title}>Who Am I?</h2>
-        <p>
+        {/* <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
           temporibus in accusantium eligendi, ad eius autem sapiente excepturi
           voluptatem at ut quam, cupiditate natus sunt quo eum repellat maxime
           quaerat!
-        </p>
+        </p> */}
       </header>
       <section className={classes.flex}>
         <div className={classes.left}>

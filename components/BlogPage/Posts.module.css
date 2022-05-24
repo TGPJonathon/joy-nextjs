@@ -1,0 +1,12 @@
+.post {
+  margin: 3em 20%;
+  line-height: 2em;
+  font-size: clamp(1rem, 1vw, 1.3rem);
+  text-align: justify;
+}
+
+@media (max-width: 500px) {
+  .post {
+    margin: 3em 10%;
+  }
+}

@@ -6,6 +6,7 @@ import Phone from '/public/icons/phone.svg';
 import Mail from '/public/icons/mail.svg';
 
 import classes from './Footer.module.css';
+import SocialLinks from '../../SocialLinks/SocialLinks';
 
 export default function Footer() {
   return (
@@ -28,7 +29,7 @@ export default function Footer() {
       <section className={classes.space}>
         <p>Social Media</p>
         <p>
-          <Facebook /> <Instagram /> <Twitter /> <Youtube />
+          <SocialLinks />
         </p>
         <p>Copyright &copy; 2022&#9702;All Rights Reserved</p>
       </section>

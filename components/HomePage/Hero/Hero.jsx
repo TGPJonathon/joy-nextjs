@@ -6,6 +6,7 @@ import Twitter from '../../../public/social_media_icons/twitter.svg';
 import Youtube from '../../../public/social_media_icons/youtube.svg';
 
 import classes from './Hero.module.css';
+import SocialLinks from '../../SocialLinks/SocialLinks';
 
 export default function Hero() {
   return (
@@ -53,7 +54,7 @@ export default function Hero() {
       </section>
       <section className={classes.socials}>
         <div className={classes.line + ' ' + classes.line_one}></div>
-        <Facebook /> <Instagram /> <Twitter /> <Youtube />
+        <SocialLinks />
         <div className={classes.line + ' ' + classes.line_two}></div>
       </section>
     </section>

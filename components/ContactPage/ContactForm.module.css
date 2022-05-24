@@ -1,0 +1,22 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.name,
+.email,
+.message {
+  margin: 0.5em 0;
+  padding: 12px 20px;
+}
+
+.button {
+  background: black;
+  color: white;
+  margin: 1em 0;
+}
+
+.message {
+  resize: none;
+}

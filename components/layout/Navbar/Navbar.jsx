@@ -23,7 +23,7 @@ export default function Navbar() {
             <Link href="/blog">Blog</Link>
           </li>
           <li className={classes.links}>
-            <Link href="#">Contact</Link>
+            <Link href="/contact">Contact</Link>
           </li>
           <li className={classes.links}>
             <Link href="#">Media</Link>
