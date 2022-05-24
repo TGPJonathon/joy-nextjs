@@ -26,10 +26,10 @@ export default function Navbar() {
             <Link href="/contact">Contact</Link>
           </li>
           <li className={classes.links}>
-            <Link href="#">Media</Link>
+            <Link href="/media">Media</Link>
           </li>
           <li className={classes.links + ' ' + classes.important}>
-            <Link href="#">Store</Link>
+            <Link href="/store">Store</Link>
           </li>
         </ul>
         <div className={classes.mobilenav}>

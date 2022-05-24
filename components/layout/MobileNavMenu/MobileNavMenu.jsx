@@ -62,7 +62,7 @@ export default function MobileNavMenu({ toggleMenu }) {
         <li className={classes.link_width + ' ' + classes.menu_color}>
           <MobileNavLink
             onClick={toggleMenu}
-            page="#"
+            page="/media"
             svg={<Camera />}
             text="Media"
           />

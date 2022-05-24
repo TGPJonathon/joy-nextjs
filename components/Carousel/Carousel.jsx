@@ -6,7 +6,6 @@ import Card from '../Card/Card';
 import classes from './Carousel.module.css';
 
 export default function Carousel({ Cards }) {
-  console.log(Cards);
   return (
     <section className={classes.carousel}>
       <Loop

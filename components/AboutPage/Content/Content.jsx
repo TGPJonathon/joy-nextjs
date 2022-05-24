@@ -1,21 +1,16 @@
+import { Fragment } from 'react';
+
 import SideBar from '../SideBar/SideBar';
 
 import Trophy from '../../../public/icons/trophy-outline.svg';
 
 import classes from './Content.module.css';
-import { Fragment } from 'react';
 
 export default function Content() {
   return (
     <Fragment>
       <header className={classes.header_content}>
         <h2 className={classes.about_title}>Who Am I?</h2>
-        {/* <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-          temporibus in accusantium eligendi, ad eius autem sapiente excepturi
-          voluptatem at ut quam, cupiditate natus sunt quo eum repellat maxime
-          quaerat!
-        </p> */}
       </header>
       <section className={classes.flex}>
         <div className={classes.left}>
