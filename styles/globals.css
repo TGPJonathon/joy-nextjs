@@ -37,6 +37,7 @@ button {
   border: solid black 1px;
   padding: 10px 48px;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 }
 
 button:hover {

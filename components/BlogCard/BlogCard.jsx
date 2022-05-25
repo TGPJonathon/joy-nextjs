@@ -5,7 +5,14 @@ export default function BlogCard({ imageSrc, title, description, date }) {
   return (
     <article className={classes.card}>
       <div className={classes.image}>
-        <Image src="/test-picture3.jpg" alt="test" height={1000} width={1000} />
+        {imageSrc && (
+          <Image
+            src="/test-picture3.jpg"
+            alt="test"
+            height={1000}
+            width={1000}
+          />
+        )}
       </div>
       <div className={classes.bottom}>
         <h3>{title}</h3>

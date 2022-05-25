@@ -1,75 +1,80 @@
 import { Fragment } from 'react';
-
-import SideBar from '../SideBar/SideBar';
-
-import Trophy from '../../../public/icons/trophy-outline.svg';
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 import classes from './Content.module.css';
 
 export default function Content() {
   return (
     <Fragment>
-      <header className={classes.header_content}>
-        <h2 className={classes.about_title}>Who Am I?</h2>
-      </header>
-      <section className={classes.flex}>
-        <div className={classes.left}>
-          <div className={classes.text}>
+      <article>
+        <section className={classes.top}>
+          <div className={classes.top__text__container}>
+            <span className={classes.top__text}>
+              Hello! My name is Joy, and I got a lot to talk about
+            </span>
+          </div>
+          <ParallaxBanner
+            layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
+            // className="aspect-[2/1]"
+          />
+        </section>
+
+        <section className={classes.middle}>
+          <div className={classes.middle__left}>
+            <span className={classes.rotate}>About Me</span>
+          </div>
+          <div className={classes.middle__middle}>
             <p>
-              Joy Anjelica is an award-winning slam champion, open mic host,
-              content creator, closet Soundcloud rapper, and social media
-              manager based out of the DMV area. Joy graduated from Morgan State
-              University in 2018, with a B.A. in Psychology and a minor in
-              Creative Writing.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+              et quae aspernatur dignissimos! Facilis natus quo eos minus eum
+              cupiditate officiis sapiente vero, in, sint reiciendis ducimus
+              voluptatem fuga expedita.
             </p>
             <p>
-              Her debut collection of poetry, Growing Pains, was published in
-              2020 at the beginning of the current global pandemic. The Founder
-              of Oxon Hill High School's Slam Team, founder of MSUPoets, and
-              former member of both the Baltimore City Youth Poetry Slam Team
-              and Words Beats and Life Youth Poetry Slam Teams explores art not
-              only through writing but through multi-media production and
-              content creation.
-            </p>
-            <p>
-              Her creative portfolio explores themes of womanhood, hip-hop,
-              blackness, love, mental health, substance abuse, and race
-              relations, utilizing a multitude of creative lenses. Beginning her
-              poetry career in 2013, Joy has won multiple awards including DC
-              Youth Slam's MC Olympics in 2014, 3rd Place in Baltimore's Grand
-              Slam Championship in 2016, and is a former Baltimore City Youth
-              Poetry Ambassador (2015). She is also an NAACP ACT-SO finalist
-              receiving silver and bronze medals for poetry and oratory (2015).
-              She is a 2xs competitor at the Brave New Voices international
-              poetry slam, consecutively performing on the final stage both
-              years she competed in the competition.
-            </p>
-            <p>
-              She has dedicated almost a decade to honing her skills and
-              creating communities for young artists from all walks of life, and
-              across all mediums, hosting open mics, hip hop cyphers, workshops,
-              and artist showcases. Joy was also previously the mid-Atlantic
-              region Mawa Scribes champion (2016) and has featured at many
-              notable venues such as DC's Kennedy Theater, The Arc Theater, and
-              Bus Boys and Poets. Joy views art as a vehicle for change and
-              social justice through entertaining and also educating audiences.
-            </p>
-            <p>
-              Joy currently works as a program manager and social media
-              coordinator in the public health field concentrating on substance
-              use and sexual reproductive health for the Baltimore City Health
-              Department and ETR. Joy also hosts, ENJOY THE MIC on 2nd and 4th
-              Thursdays at Next Phaze Cafe, 112. E Lexington Street.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem natus ullam nesciunt enim saepe nobis unde quam,
+              nostrum odio, ducimus quod possimus impedit magni accusantium,
+              libero placeat vitae temporibus quaerat! Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Non facere ut magni porro
+              quidem ipsa, excepturi, perferendis nesciunt eveniet earum
+              architecto laudantium totam veritatis quos amet natus corrupti
+              omnis saepe!
             </p>
           </div>
-        </div>
-        <div className={classes.right}>
-          <SideBar icon={<Trophy />} text="Award Winning Poet" />
-          <SideBar icon={<Trophy />} text="Amazing Host" />
-          <SideBar icon={<Trophy />} text="Activist" />
-          <SideBar icon={<Trophy />} text="Author" />
-        </div>
-      </section>
+          <div className={classes.middle__right}></div>
+        </section>
+
+        <section className={classes.bottom}>
+          <ParallaxBanner
+            layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
+            // className="aspect-[2/1]"
+          />
+          <div className={classes.bottom__right}>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem sunt temporibus amet vel quidem doloremque
+              provident, dicta dolores vero, similique tenetur itaque dolorum
+              quas ipsa tempore quae! Voluptas, illo laborum?
+            </span>
+          </div>
+        </section>
+        <section className={classes.bottom_bottom}>
+          <div className={classes.bottom_bottom__left}>
+            <h1 className={classes.bottom_bottom__title}>
+              Come Look Around And Browse!
+            </h1>
+            <div className={classes.cards}>
+              <button className={classes.button}>Hit Me Up!</button>
+              <button className={classes.button}>Come To An Event</button>
+              <button className={classes.button}>Buy Merch!</button>
+            </div>
+          </div>
+          <ParallaxBanner
+            layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
+            // className="aspect-[2/1]"
+          />
+        </section>
+      </article>
     </Fragment>
   );
 }
