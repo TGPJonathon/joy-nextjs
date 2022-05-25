@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 
-import Carousel from '../../components/Carousel/Carousel';
+import Carousel from '../components/Carousel/Carousel';
 
-import HeroComponent from '../../components/Hero/HeroComponent';
+import HeroComponent from '../components/Hero/HeroComponent';
 
 export default function Events() {
   //   const titles = [];
