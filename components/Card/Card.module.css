@@ -1,25 +1,28 @@
 .card {
+  border-top: solid 1px black;
   text-align: center;
-  margin: 1em 1em;
+  margin: 1em 2em;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  width: clamp(700px, 50vw, 2000px);
+  /* flex-wrap: nowrap; */
+  box-shadow: 1.6px 1.6px 2.1px rgba(0, 0, 0, 0.013),
+    3.4px 3.4px 4.3px rgba(0, 0, 0, 0.019),
+    5.8px 5.8px 6.8px rgba(0, 0, 0, 0.023),
+    8.7px 8.7px 9.5px rgba(0, 0, 0, 0.027),
+    12.5px 12.5px 12.8px rgba(0, 0, 0, 0.03),
+    17.7px 17.7px 16.9px rgba(0, 0, 0, 0.033),
+    25.1px 25.1px 22.5px rgba(0, 0, 0, 0.037),
+    36.5px 36.5px 30.9px rgba(0, 0, 0, 0.041),
+    56.3px 56.3px 45.7px rgba(0, 0, 0, 0.047),
+    100px 100px 80px rgba(0, 0, 0, 0.06);
 }
 
 .image {
   display: flex;
-}
-
-.content {
-  max-width: clamp(300px, 50vw, 2000px);
-  margin: 0 0;
-  padding: 1em 1em;
-  text-align: justify;
-  align-self: center;
-}
-
-.content,
-.datetime {
-  font-size: clamp(1rem, 1vw, 2rem);
+  /* width: 300px; */
+  max-width: clamp(300px, 20vw, 2000px);
 }
 
 .information {
@@ -30,23 +33,6 @@
   width: 100%;
 }
 
-.bottom h3 {
-  margin: 0 0;
-  padding-top: 1em;
-}
-
-.bold {
-  font-weight: 800;
-}
-
-@media (max-width: 1100px) {
-  .card {
-    flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 500px) {
-  .content {
-    align-self: center;
-  }
+.text {
+  font-size: clamp(1rem, 3vw, 2rem);
 }

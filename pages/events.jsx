@@ -1,11 +1,10 @@
 import { Fragment } from 'react';
+import Past from '../components/EventPage/Events/Past';
+import Upcoming from '../components/EventPage/Events/Upcoming';
 
-import Carousel from '../components/Carousel/Carousel';
-
-import HeroComponent from '../components/Hero/HeroComponent';
+import Parallax from '../components/EventPage/Parallax/Parallax';
 
 export default function Events() {
-  //   const titles = [];
   const titles = [
     'Enjoy The Mic!',
     'Enjoy The Mic!',
@@ -25,28 +24,11 @@ export default function Events() {
 
   return (
     <Fragment>
-      <header style={{ height: '25vh' }}>
-        <HeroComponent
-          imageSrc="/stage-picture.jpg"
-          alt="temp picture"
-          pictureClass="background_picture_header"
-          filter={true}
-          title="Events"
-        />
-      </header>
       <main>
-        <p
-          style={{
-            width: '100%',
-            textAlign: 'center',
-            fontSize: 'clamp(1rem, 1vw, 2rem)',
-          }}
-        >
-          I currently have {titles.length} event
-          {titles.length > 1 || titles.length == 0 ? 's' : ''} coming up!
-        </p>
-        {titles.length == 0 && <p>Check back here for new events!</p>}
-        {titles.length > 1 && <Carousel Cards={cards} />}
+        <Parallax />
+        <h2>Upcoming Events</h2>
+        <Upcoming />
+        {/* <Past /> */}
       </main>
     </Fragment>
   );

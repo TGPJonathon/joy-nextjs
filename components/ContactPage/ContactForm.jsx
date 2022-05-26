@@ -3,6 +3,7 @@ import classes from './ContactForm.module.css';
 export default function ContactForm() {
   return (
     <section className={classes.flex}>
+      <h2>Contact Me</h2>
       <input className={classes.name} type="text" placeholder="Name" />
       <input
         className={classes.email}

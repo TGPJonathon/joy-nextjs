@@ -8,27 +8,10 @@ export default function Card({ imageSrc, title, text, date, time, location }) {
         <Image src="/test-picture3.jpg" alt="test" height={1000} width={1000} />
       </div>
       <div className={classes.information}>
-        <h2 className={classes.title}>{title}</h2>
-        <p className={classes.content}>{text}</p>
-        {location && (
-          <div>
-            <h3>Location</h3>
-            <p className={classes.datetime}>{location}</p>
-          </div>
-        )}
-        {date && (
-          <div>
-            <h3>Date</h3>
-            <p className={classes.datetime}>{date}</p>
-          </div>
-        )}
-        {time && (
-          <div>
-            <h3>Time</h3>
-            <p className={classes.datetime}>{time}</p>
-          </div>
-        )}
-        <p className={classes.bold}>Click or Tap to see more Info!</p>
+        <h3 className={classes.text}>Enjoy The Mic</h3>
+        <p className={classes.text}>Baltimore, MD</p>
+        <p className={classes.text}> June 2, 2022</p>
+        <p className={classes.text}>Click Me For Details</p>
       </div>
     </article>
   );

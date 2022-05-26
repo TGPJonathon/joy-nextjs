@@ -17,7 +17,14 @@ export default function Navbar() {
             <Link href="/about">About</Link>
           </li>
           <li className={classes.links}>
-            <Link href="/events">Events</Link>
+            {/* <Link href="/events">Events</Link> */}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.eventbrite.com/o/joy-anjelica-32259229895"
+            >
+              Events
+            </a>
           </li>
           <li className={classes.links}>
             <Link href="/blog">Blog</Link>
