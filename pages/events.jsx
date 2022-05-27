@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
-import Past from '../components/EventPage/Events/Past';
-import Upcoming from '../components/EventPage/Events/Upcoming';
+import Content from '../components/EventPage/Events/Content';
 
 import Parallax from '../components/EventPage/Parallax/Parallax';
 
@@ -14,7 +13,7 @@ export default function Events() {
   const cards = titles.map((title) => {
     return {
       attributes: {
-        Title: title,
+        title: title,
         text: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero veniam corrupti consequuntur accusantium dolore vero voluptatibus deserunt excepturi obcaecati cupiditate! Deserunt natus veritatis sequi veniam atque quod minus! Modi, ab.',
         Time: '2022-12-21z2:30',
         location: '10000 Allentown Rd, Fort Washington MD, 20744',
@@ -26,9 +25,7 @@ export default function Events() {
     <Fragment>
       <main>
         <Parallax />
-        <h2>Upcoming Events</h2>
-        <Upcoming />
-        {/* <Past /> */}
+        <Content />
       </main>
     </Fragment>
   );

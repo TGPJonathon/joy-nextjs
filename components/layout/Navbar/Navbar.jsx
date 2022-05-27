@@ -18,13 +18,13 @@ export default function Navbar() {
           </li>
           <li className={classes.links}>
             {/* <Link href="/events">Events</Link> */}
-            <a
+            {/* <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.eventbrite.com/o/joy-anjelica-32259229895"
-            >
-              Events
-            </a>
+            > */}
+            <Link href="/events">Events</Link>
+            {/* </a> */}
           </li>
           <li className={classes.links}>
             <Link href="/blog">Blog</Link>
