@@ -8,7 +8,7 @@ export default function Content() {
       <div className={classes.event}>
         <div className={classes.image}>
           <ParallaxBanner
-            layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
+            layers={[{ image: '/test-picture2.jpg', speed: -50 }]}
             className={classes.banner}
           />
         </div>
@@ -40,7 +40,7 @@ export default function Content() {
       <div className={classes.event}>
         <div className={classes.image}>
           <ParallaxBanner
-            layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
+            layers={[{ image: '/temp-contact2.jpg', speed: -50 }]}
             className={classes.banner}
           />
         </div>
