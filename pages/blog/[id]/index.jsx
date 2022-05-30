@@ -1,20 +1,9 @@
 import { Fragment } from 'react';
 import Posts from '../../../components/BlogPage/Posts';
 
-import HeroComponent from '../../../components/Hero/HeroComponent';
-
 export default function Blog({ imageSrc, title, content }) {
   return (
     <Fragment>
-      <header style={{ height: '25vh' }}>
-        <HeroComponent
-          imageSrc="/temp-blog.jpg"
-          alt="temp picture"
-          pictureClass="background_picture_header"
-          filter={true}
-          title="Blog"
-        />
-      </header>
       <main>
         <Posts
           content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis eveniet nobis pariatur nemo, porro vero, soluta et omnis nam voluptatum officiis, voluptas dolorem veritatis minus earum laborum magnam repellendus!

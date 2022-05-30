@@ -1,10 +1,5 @@
 import HeroComponent from '../../Hero/HeroComponent';
 
-import Facebook from '../../../public/social_media_icons/facebook.svg';
-import Instagram from '../../../public/social_media_icons/instagram.svg';
-import Twitter from '../../../public/social_media_icons/twitter.svg';
-import Youtube from '../../../public/social_media_icons/youtube.svg';
-
 import classes from './Hero.module.css';
 import SocialLinks from '../../SocialLinks/SocialLinks';
 
@@ -24,14 +19,14 @@ export default function Hero() {
         <p className={classes.text + ' ' + classes.content_text}>
           poet. author. artist. creative.
         </p>
-        <ul className={classes.buttons}>
+        {/* <ul className={classes.buttons}>
           <li>About</li>
           <li>Events</li>
           <li>Blog</li>
           <li>Contact</li>
           <li>Media</li>
           <li>Store</li>
-        </ul>
+        </ul> */}
         {/* <div className={classes.svg}>
           <svg
             preserveAspectRatio="xMidYMid meet"
