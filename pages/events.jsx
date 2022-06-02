@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import Content from '../components/EventPage/Events/Content';
 
-import Parallax from '../components/EventPage/Parallax/Parallax';
+import Parallax from '../components/Parallax/Parallax';
 
 export default function Events() {
   const titles = [
@@ -24,7 +24,7 @@ export default function Events() {
   return (
     <Fragment>
       <main>
-        <Parallax />
+        <Parallax image="/joy-picture.jpg" text="Events" />
         <Content />
       </main>
     </Fragment>

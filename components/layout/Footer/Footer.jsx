@@ -1,7 +1,3 @@
-import Facebook from '../../../public/social_media_icons/facebook.svg';
-import Instagram from '../../../public/social_media_icons/instagram.svg';
-import Twitter from '../../../public/social_media_icons/twitter.svg';
-import Youtube from '../../../public/social_media_icons/youtube.svg';
 import Phone from '/public/icons/phone.svg';
 import Mail from '/public/icons/mail.svg';
 

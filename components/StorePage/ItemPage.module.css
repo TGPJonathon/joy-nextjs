@@ -1,0 +1,71 @@
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  height: 100%;
+  filter: brightness(70%);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 2em;
+}
+
+.info select {
+  padding-left: 12px;
+  padding-right: 36px;
+  border-radius: 6px;
+  box-shadow: 0 1px 6px 0 rgb(34 34 34 / 15%);
+}
+
+.image {
+  padding: 2em 2em;
+  max-width: 600px;
+  align-self: center;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.price {
+  margin: 0 0;
+  font-size: 1.4rem;
+}
+
+.text {
+  max-width: clamp(500px, 50vw, 1000px);
+}
+
+.description {
+  line-height: 1.5em;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.label {
+  margin-bottom: 0.5em;
+  align-self: center;
+}
+
+.select {
+  width: 350px;
+  max-width: 500px;
+  padding: 1em;
+  align-self: center;
+}
+
+.button {
+  max-width: 450px;
+  align-self: center;
+  margin: 2em 0;
+}
+
+@media (max-width: 750px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+}

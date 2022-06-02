@@ -1,10 +1,15 @@
 import Link from 'next/link';
+import { useContext } from 'react';
 
 import Logo from '../Logo/Logo';
 import MobileNav from '../MobileNav/MobileNav';
 import classes from './Navbar.module.css';
 
+import AppContext from '../../../AppContext';
+
 export default function Navbar() {
+  const value = useContext(AppContext);
+
   return (
     <nav className={classes.navbar}>
       <Logo />
@@ -38,6 +43,11 @@ export default function Navbar() {
           <li className={classes.links + ' ' + classes.important}>
             <Link href="/store">Store</Link>
           </li>
+          {value.cart.length > 0 && (
+            <li className={classes.links}>
+              <Link href="/checkout">Cart</Link>
+            </li>
+          )}
         </ul>
         <div className={classes.mobilenav}>
           <MobileNav />

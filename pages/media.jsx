@@ -16,7 +16,7 @@ export default function Media() {
           title="Media"
         />
       </header>
-      <main style={{ margin: '0 10%' }}>
+      <main style={{ padding: '0 10%', backgroundColor: '#d7a86e' }}>
         <Youtube />
         <Gallery />
       </main>

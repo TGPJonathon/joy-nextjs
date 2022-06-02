@@ -1,0 +1,9 @@
+.title,
+.price {
+  font-weight: 500;
+}
+
+.store_element {
+  margin-top: 2em;
+  /* max-width: 400px; */
+}

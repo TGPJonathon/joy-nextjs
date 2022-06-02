@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import HeroComponent from '../../components/Hero/HeroComponent';
 import BlogCard from '../../components/BlogCard/BlogCard';
-import GridContainer from '../../components/Containers/GridContainer';
+import Container from '../../components/Containers/Container';
 
 export default function Blog() {
   const posts = [
@@ -118,7 +118,7 @@ export default function Blog() {
         />
       </header>
       <main>
-        <GridContainer>
+        <Container style="flex">
           {posts.map((post, index) => {
             return (
               <div style={{ height: 'fit-content' }} key={index}>
@@ -136,7 +136,7 @@ export default function Blog() {
               </div>
             );
           })}
-        </GridContainer>
+        </Container>
       </main>
     </Fragment>
   );

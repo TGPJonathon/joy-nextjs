@@ -5,7 +5,7 @@
 
 .left {
   width: clamp(400px, 50vw, 1500px);
-  background-color: #f88f01;
+  background-color: #d7a86e;
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
