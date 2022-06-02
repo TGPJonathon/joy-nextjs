@@ -6,6 +6,7 @@ import MobileNav from '../MobileNav/MobileNav';
 import classes from './Navbar.module.css';
 
 import AppContext from '../../../AppContext';
+import CheckoutCart from '../../CheckoutCart/CheckoutCart';
 
 export default function Navbar() {
   const value = useContext(AppContext);
@@ -22,14 +23,7 @@ export default function Navbar() {
             <Link href="/about">About</Link>
           </li>
           <li className={classes.links}>
-            {/* <Link href="/events">Events</Link> */}
-            {/* <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.eventbrite.com/o/joy-anjelica-32259229895"
-            > */}
             <Link href="/events">Events</Link>
-            {/* </a> */}
           </li>
           <li className={classes.links}>
             <Link href="/blog">Blog</Link>
@@ -43,9 +37,13 @@ export default function Navbar() {
           <li className={classes.links + ' ' + classes.important}>
             <Link href="/store">Store</Link>
           </li>
-          {value.cart.length > 0 && (
+          {Object.keys(value.cart).length > 0 && (
             <li className={classes.links}>
-              <Link href="/checkout">Cart</Link>
+              <Link href="/checkout">
+                <a>
+                  <CheckoutCart quantity={Object.keys(value.cart).length} />
+                </a>
+              </Link>
             </li>
           )}
         </ul>

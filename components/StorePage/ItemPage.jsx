@@ -1,9 +1,21 @@
 import Image from 'next/image';
-import { Fragment } from 'react';
+import { Fragment, useState, useContext } from 'react';
+import AppContext from '../../AppContext';
 import Parallax from '../Parallax/Parallax';
 import classes from './ItemPage.module.css';
 
 export default function ItemPage() {
+  const value = useContext(AppContext);
+  const [quantity, setQuantity] = useState(1);
+
+  const addItemToCart = () => {
+    const x = 8;
+    const item = {};
+    item[x] = { title: 'Title', price: 'Price', num: quantity };
+    value.setCart({ ...value.cart, ...item });
+    console.log(value.cart);
+  };
+
   return (
     <Fragment>
       <Parallax image="/temp-contact2.jpg" text="Merch" />
@@ -30,7 +42,12 @@ export default function ItemPage() {
           <label className={classes.label} htmlFor="quantity">
             Quantity
           </label>
-          <select className={classes.select} name="quantity" id="quantity">
+          <select
+            onChange={(e) => setQuantity(e.target.value)}
+            className={classes.select}
+            name="quantity"
+            id="quantity"
+          >
             <option value={1}>1</option>
             {Array(49)
               .fill(undefined)
@@ -42,7 +59,9 @@ export default function ItemPage() {
                 );
               })}
           </select>
-          <button className={classes.button}>Add to cart</button>
+          <button onClick={addItemToCart} className={classes.button}>
+            Add to cart
+          </button>
         </div>
       </section>
     </Fragment>

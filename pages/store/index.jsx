@@ -1,5 +1,5 @@
-import { Fragment, useContext } from 'react';
-import AppContext from '../../AppContext';
+import { Fragment } from 'react';
+
 import Container from '../../components/Containers/Container';
 import Link from 'next/link';
 
@@ -7,8 +7,6 @@ import HeroComponent from '../../components/Hero/HeroComponent';
 import StoreElement from '../../components/StorePage/StoreElement';
 
 export default function Store() {
-  const value = useContext(AppContext);
-
   //Replace with actual store items from database
   const array = [1, 2, 3, 4];
 

@@ -6,7 +6,7 @@ import AppContext from '../AppContext';
 import Layout from '../components/layout/Layout/Layout';
 
 function MyApp({ Component, pageProps }) {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState({});
 
   return (
     <ParallaxProvider>
