@@ -1,0 +1,18 @@
+.pay {
+  padding: 3em 0;
+  margin: 0 2em;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle {
+  display: flex;
+}
+
+.cart {
+  font-size: 30px;
+}

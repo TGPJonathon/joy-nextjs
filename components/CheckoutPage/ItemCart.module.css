@@ -1,0 +1,29 @@
+.middle__left {
+  display: flex;
+}
+
+.content {
+  display: flex;
+}
+
+.remove {
+  cursor: pointer;
+}
+
+.left_side {
+  margin: 0 1em;
+}
+
+.select {
+  height: 50px;
+  padding: 1em 1em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+  margin: 0em 3em;
+}
+
+.price {
+  margin-left: 1em;
+  margin-right: 1em;
+}

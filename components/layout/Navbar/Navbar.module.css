@@ -5,7 +5,6 @@
   position: fixed;
   width: 100%;
   z-index: 10;
-  /* background-color: black; */
 }
 
 .navlinks {
@@ -24,6 +23,13 @@
   color: white;
 }
 
+.cart {
+  color: white;
+}
+.cart::marker {
+  color: transparent;
+}
+
 .mobilenav {
   display: none;
 }
@@ -35,13 +41,12 @@
   color: white;
 }
 
-@media (max-width: 694px) {
+@media (max-width: 778px) {
   .navlinks {
     display: none;
   }
 
   .mobilenav {
     display: block;
-    /* margin: 1em 1em; */
   }
 }

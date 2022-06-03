@@ -2,11 +2,13 @@ import Image from 'next/image';
 import { Fragment, useState, useContext } from 'react';
 import AppContext from '../../AppContext';
 import Parallax from '../Parallax/Parallax';
+import Popup from '../Popup/Popup';
 import classes from './ItemPage.module.css';
 
 export default function ItemPage() {
   const value = useContext(AppContext);
   const [quantity, setQuantity] = useState(1);
+  const [itemAdded, setItemAdded] = useState(false);
 
   const addItemToCart = () => {
     const x = 8;
@@ -14,6 +16,10 @@ export default function ItemPage() {
     item[x] = { title: 'Title', price: 'Price', num: quantity };
     value.setCart({ ...value.cart, ...item });
     console.log(value.cart);
+    setItemAdded(true);
+    setTimeout(() => {
+      setItemAdded(false);
+    }, 3000);
   };
 
   return (
@@ -64,6 +70,7 @@ export default function ItemPage() {
           </button>
         </div>
       </section>
+      {itemAdded && <Popup />}
     </Fragment>
   );
 }
