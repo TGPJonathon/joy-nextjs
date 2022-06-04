@@ -10,7 +10,7 @@ import CheckoutCart from '../../CheckoutCart/CheckoutCart';
 
 export default function Navbar() {
   const value = useContext(AppContext);
-  const cart = Object.keys(value.cart).length > 0 && (
+  const cart = (
     <li className={classes.cart}>
       <Link href="/checkout">
         <a>

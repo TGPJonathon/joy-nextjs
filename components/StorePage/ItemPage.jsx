@@ -13,7 +13,11 @@ export default function ItemPage() {
   const addItemToCart = () => {
     const x = 8;
     const item = {};
-    item[x] = { title: 'Title', price: 'Price', num: quantity };
+    item[x] = {
+      title: 'Growing Pains: Clean Edition',
+      price: '$9.99',
+      num: quantity,
+    };
     value.setCart({ ...value.cart, ...item });
     console.log(value.cart);
     setItemAdded(true);

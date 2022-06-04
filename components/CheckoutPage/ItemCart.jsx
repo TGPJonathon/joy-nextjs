@@ -1,29 +1,47 @@
+import { useState } from 'react';
+
 import Image from 'next/image';
 
 import classes from './ItemCart.module.css';
 
-export default function ItemCart() {
+export default function ItemCart({ imageSrc, name, price, num }) {
+  const [quantity, setQuantity] = useState(num);
+
   return (
-    <div className={classes.middle__left}>
-      <div className={classes.image}>
-        <Image src="/book1.webp" alt="test" height={200} width={200} />
-      </div>
-      <div className={classes.content}>
-        <div className={classes.left_side}>
-          <p>Name of Item</p>
-          <p className={classes.remove}>Remove</p>
+    <div className={classes.item}>
+      <div className={classes.left}>
+        <div className={classes.image}>
+          <Image src="/book1.webp" alt="test" height={200} width={200} />
         </div>
+
+        <div className={classes.name_price}>
+          <p>{name}</p> <p>{price}</p>
+        </div>
+      </div>
+
+      <div className={classes.right}>
+        <p className={classes.remove}>Remove</p>
 
         <select
           className={classes.select}
-          defaultValue="gang"
+          defaultValue={num}
           name="quantity"
           id="quantity"
+          onChange={(e) => setQuantity(e.target.value)}
         >
-          <option value="free">Free</option>
-          <option value="gang">Gang</option>
+          {Array(50)
+            .fill(undefined)
+            .map((n, i) => {
+              return (
+                <option value={i + 1} key={i + 1}>
+                  {i + 1}
+                </option>
+              );
+            })}
         </select>
-        <p className={classes.price}>$9.99</p>
+        <p className={classes.price}>
+          ${(quantity * price.substring(1)).toFixed(2)}
+        </p>
       </div>
     </div>
   );

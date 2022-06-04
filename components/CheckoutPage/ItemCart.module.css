@@ -1,17 +1,27 @@
-.middle__left {
+.item {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+  width: 1000px;
+}
+
+.left,
+.right {
   display: flex;
 }
 
-.content {
-  display: flex;
+.name_price {
+  margin-left: 2em;
+  align-self: center;
+}
+
+.right {
+  align-self: center;
 }
 
 .remove {
+  color: red;
   cursor: pointer;
-}
-
-.left_side {
-  margin: 0 1em;
 }
 
 .select {

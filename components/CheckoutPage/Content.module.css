@@ -1,18 +1,42 @@
 .pay {
   padding: 3em 0;
-  margin: 0 2em;
+  margin: auto auto;
+  max-width: 1000px;
 }
 
 .top {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 }
 
 .middle {
   display: flex;
+  flex-direction: column;
+}
+
+.itemCart {
+  display: flex;
+  justify-content: center;
+}
+
+.total {
+  display: flex;
+  justify-content: right;
 }
 
 .cart {
   font-size: 30px;
+}
+
+.image {
+  width: 50%;
+  filter: brightness(70%);
+}
+
+.image span {
+  display: block !important;
+}
+
+.banner {
+  height: 100%;
 }
