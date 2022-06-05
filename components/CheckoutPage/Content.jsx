@@ -1,12 +1,22 @@
-import { Fragment } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 import classes from './Content.module.css';
 import ItemCart from './ItemCart';
 
-export default function Content({ cart, numItems }) {
+export default function Content({ cart, numItems, setCart }) {
+  const [total, setTotal] = useState(0);
   const newCart = Object.entries(cart).map(([id, obj]) => ({ id, ...obj }));
-  console.log(newCart);
+
+  useEffect(() => {
+    let total = 0;
+    for (const id in cart) {
+      const item = cart[id];
+      total += parseFloat(item.price.substring(1)) * parseInt(item.num);
+    }
+    setTotal(total.toFixed(2));
+  }, [cart]);
+
   return (
     <Fragment>
       {/* <div className={classes.image}>
@@ -25,13 +35,20 @@ export default function Content({ cart, numItems }) {
           {newCart.map(({ id, title, price, num }) => {
             return (
               <div className={classes.itemCart} key={id}>
-                <ItemCart name={title} price={price} num={num} />
+                <ItemCart
+                  cart={cart}
+                  setCart={setCart}
+                  name={title}
+                  price={price}
+                  num={num}
+                  id={id}
+                />
               </div>
             );
           })}
 
           <div className={classes.total}>
-            <p>Hey</p>
+            <p>${total}</p>
           </div>
         </div>
       </section>

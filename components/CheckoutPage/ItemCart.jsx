@@ -1,11 +1,24 @@
-import { useState } from 'react';
-
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 import classes from './ItemCart.module.css';
 
-export default function ItemCart({ imageSrc, name, price, num }) {
+export default function ItemCart({
+  imageSrc,
+  name,
+  price,
+  num,
+  id,
+  cart,
+  setCart,
+}) {
   const [quantity, setQuantity] = useState(num);
+
+  useEffect(() => {
+    const item = {};
+    item[id] = { title: name, price: price, num: quantity };
+    setCart({ ...cart, ...item });
+  }, [quantity, id, name, price, setCart]);
 
   return (
     <div className={classes.item}>
