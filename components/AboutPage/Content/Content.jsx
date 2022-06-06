@@ -14,8 +14,8 @@ export default function Content() {
             </span>
           </div>
           <ParallaxBanner
-            layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
-            // className="aspect-[2/1]"
+            layers={[{ image: '/joy/joy7.jpg', speed: -50 }]}
+            className={classes.banner}
           />
         </section>
 

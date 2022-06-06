@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className={classes.container}>
       <HeroComponent
-        imageSrc="/test-picture.jpg"
+        imageSrc="/joy/joy1.jpeg"
         alt="black woman"
         pictureClass="background_picture"
       />

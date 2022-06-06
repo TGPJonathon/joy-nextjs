@@ -1,30 +1,30 @@
 import { Fragment, useState, useEffect } from 'react';
-import { ParallaxBanner } from 'react-scroll-parallax';
+import Link from 'next/link';
 
 import classes from './Content.module.css';
 import ItemCart from './ItemCart';
 
 export default function Content({ cart, numItems, setCart }) {
   const [total, setTotal] = useState(0);
-  const newCart = Object.entries(cart).map(([id, obj]) => ({ id, ...obj }));
+  const [newCart, setNewCart] = useState(
+    Object.entries(cart).map(([id, obj]) => ({ id, ...obj }))
+  );
 
   useEffect(() => {
-    let total = 0;
-    for (const id in cart) {
-      const item = cart[id];
-      total += parseFloat(item.price.substring(1)) * parseInt(item.num);
+    if (Object.keys(cart).length > 0) {
+      let total = 0;
+      for (const id in cart) {
+        const item = cart[id];
+        total += parseFloat(item.price.substring(1)) * parseInt(item.num);
+      }
+      setTotal(total.toFixed(2));
     }
-    setTotal(total.toFixed(2));
+
+    setNewCart(Object.entries(cart).map(([id, obj]) => ({ id, ...obj })));
   }, [cart]);
 
   return (
     <Fragment>
-      {/* <div className={classes.image}>
-        <ParallaxBanner
-          layers={[{ image: '/test-picture2.jpg', speed: -50 }]}
-          className={classes.banner}
-        />
-      </div> */}
       <section className={classes.pay}>
         <div className={classes.top}>
           <p className={classes.cart}>
@@ -36,7 +36,6 @@ export default function Content({ cart, numItems, setCart }) {
             return (
               <div className={classes.itemCart} key={id}>
                 <ItemCart
-                  cart={cart}
                   setCart={setCart}
                   name={title}
                   price={price}
@@ -47,9 +46,30 @@ export default function Content({ cart, numItems, setCart }) {
             );
           })}
 
-          <div className={classes.total}>
-            <p>${total}</p>
-          </div>
+          {newCart.length == 0 && (
+            <div className={classes.empty}>
+              <p>Your cart is empty</p>
+              <Link href="/store">
+                <button className={classes.empty_button}>
+                  Continue Shopping &#8594;
+                </button>
+              </Link>
+            </div>
+          )}
+
+          {newCart.length > 0 && (
+            <div className={classes.total}>
+              <div className={classes.subtotal}>
+                <p>Subtotal</p>
+                <p className={classes.margins}>${total}</p>
+              </div>
+
+              <p className={classes.shipping}>
+                Shipping & taxes calculated at checkout
+              </p>
+              <button className={classes.button}>Checkout</button>
+            </div>
+          )}
         </div>
       </section>
     </Fragment>

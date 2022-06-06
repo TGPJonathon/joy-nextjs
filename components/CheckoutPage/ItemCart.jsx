@@ -17,8 +17,18 @@ export default function ItemCart({
   useEffect(() => {
     const item = {};
     item[id] = { title: name, price: price, num: quantity };
-    setCart({ ...cart, ...item });
+    setCart((prevCart) => {
+      return { ...prevCart, ...item };
+    });
   }, [quantity, id, name, price, setCart]);
+
+  const removeItem = () => {
+    setCart((prevCart) => {
+      const tempCart = { ...prevCart };
+      delete tempCart[id];
+      return tempCart;
+    });
+  };
 
   return (
     <div className={classes.item}>
@@ -33,7 +43,9 @@ export default function ItemCart({
       </div>
 
       <div className={classes.right}>
-        <p className={classes.remove}>Remove</p>
+        <p onClick={removeItem} className={classes.remove}>
+          Remove
+        </p>
 
         <select
           className={classes.select}

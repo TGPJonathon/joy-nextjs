@@ -11,7 +11,7 @@ export default function ItemPage() {
   const [itemAdded, setItemAdded] = useState(false);
 
   const addItemToCart = () => {
-    const x = 1;
+    const x = 9;
     const item = {};
     item[x] = {
       title: 'Growing Pains: Clean Edition',

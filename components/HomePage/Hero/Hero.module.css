@@ -55,11 +55,12 @@
   justify-content: center;
   top: 0;
   left: 3em;
+  color: white;
 }
 
 .line {
   position: absolute;
-  border-right: 1px solid black;
+  border-right: 1px solid white;
   height: 30vh;
   left: 0.6rem;
 }
@@ -78,7 +79,6 @@
     bottom: 3em;
     right: 3em;
     justify-content: flex-end;
-    color: white;
     height: 100px;
   }
 

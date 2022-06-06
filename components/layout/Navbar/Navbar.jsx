@@ -43,7 +43,7 @@ export default function Navbar() {
           <li className={classes.links}>
             <Link href="/media">Media</Link>
           </li>
-          <li className={classes.links + ' ' + classes.important}>
+          <li className={classes.links}>
             <Link href="/store">Store</Link>
           </li>
           {cart}

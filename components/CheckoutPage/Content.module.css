@@ -21,7 +21,44 @@
 
 .total {
   display: flex;
+  flex-direction: column;
   justify-content: right;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10em 0;
+}
+
+.subtotal {
+  display: flex;
+  align-self: flex-end;
+}
+
+.margins {
+  margin-left: 4em;
+}
+
+.shipping {
+  align-self: flex-end;
+  margin-bottom: 2em;
+}
+
+.button,
+.empty_button {
+  color: white;
+  background-color: black;
+}
+
+.empty_button {
+  max-width: 250px;
+}
+
+.button {
+  max-width: 200px;
+  align-self: flex-end;
 }
 
 .cart {
@@ -29,8 +66,8 @@
 }
 
 .image {
-  width: 50%;
   filter: brightness(70%);
+  height: 50vh;
 }
 
 .image span {
@@ -39,4 +76,10 @@
 
 .banner {
   height: 100%;
+}
+
+@media (max-width: 700px) {
+  .banner > div {
+    background-position: center top !important;
+  }
 }

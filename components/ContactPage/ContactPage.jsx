@@ -13,12 +13,12 @@ export default function ContactPage() {
           <ContactForm />
         </div>
         <ParallaxBanner
-          layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
+          layers={[{ image: '/joy/joy5.webp', speed: -50 }]}
           className={classes.banner}
         />
       </section>
       <ParallaxBanner
-        layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
+        layers={[{ image: '/joy/joy5.webp', speed: -10 }]}
         className={classes.mobile}
       />
     </Fragment>
