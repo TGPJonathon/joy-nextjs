@@ -3,9 +3,11 @@ import Link from 'next/link';
 
 import classes from './Content.module.css';
 import ItemCart from './ItemCart';
+import CheckoutModal from '../CheckoutModal/CheckoutModal';
 
 export default function Content({ cart, numItems, setCart }) {
   const [total, setTotal] = useState(0);
+  const [modalOpen, setModalOpen] = useState(true);
   const [newCart, setNewCart] = useState(
     Object.entries(cart).map(([id, obj]) => ({ id, ...obj }))
   );
@@ -72,6 +74,7 @@ export default function Content({ cart, numItems, setCart }) {
           )}
         </div>
       </section>
+      {modalOpen && <CheckoutModal />}
     </Fragment>
   );
 }
