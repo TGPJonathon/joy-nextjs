@@ -6,6 +6,7 @@ import * as yup from 'yup';
 import Shipping from '../CheckoutPage/Shipping';
 
 import classes from './CheckoutModal.module.css';
+import Payment from '../CheckoutPage/Payment';
 
 export default function CheckoutModal() {
   const [customerInfo, setCustomerInfo] = useState({});
@@ -61,13 +62,16 @@ export default function CheckoutModal() {
           })}
         </div>
       </div>
-      <Shipping
-        register={register}
-        handleSubmit={handleSubmit}
-        errors={errors}
-        setCustomerInfo={setCustomerInfo}
-        setSteps={setSteps}
-      />
+      {!steps[0] && (
+        <Shipping
+          register={register}
+          handleSubmit={handleSubmit}
+          errors={errors}
+          setCustomerInfo={setCustomerInfo}
+          setSteps={setSteps}
+        />
+      )}
+      {steps[0] && <Payment />}
     </aside>
   );
 }
