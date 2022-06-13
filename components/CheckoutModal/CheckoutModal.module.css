@@ -6,76 +6,48 @@
   right: 0;
   background-color: white;
   padding-top: 2em;
-}
-
-.shipping {
   display: flex;
   flex-direction: column;
-  background-color: white;
+}
+.top {
+  margin-top: 4em;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+}
+
+.step {
+  display: flex;
   align-items: center;
-  width: 50%;
-  max-width: 1000px;
-  margin: 4em auto;
+  margin-right: 1em;
 }
 
-.title {
-  align-self: flex-start;
-}
-
-.error {
-  background-color: rgba(255, 99, 71, 0.3);
-}
-
-.errorMessage {
-  color: red;
-  font-size: 14px;
-}
-
-.required {
-  color: red;
-}
-
-.item {
+.circle {
+  border-radius: 50%;
+  border: solid green 1px;
   display: flex;
-  flex-direction: column;
-  margin: 0.4em 0;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  margin: 0 1em;
+  justify-content: center;
 }
 
-.item input,
-.item select {
-  border-radius: 6px;
-  border-width: 1px;
-  padding: 9px 12px;
-  font-size: 16px;
-  height: 48px;
-  box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
+.circle span {
+  position: absolute;
 }
 
-.item label {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.cityZip {
-  display: flex;
-  justify-content: space-between;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  max-width: 700px;
-  width: 100%;
-  margin: 0 2em;
-}
-
-.button {
-  background-color: black;
+.circle::before {
+  content: '✔';
   color: white;
-  padding: 12px 18px;
-  border-radius: 24px;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-top: 1em;
+}
+
+.confirmed {
+  background-color: green;
+}
+
+.confirmed span {
+  display: none;
 }
