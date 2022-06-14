@@ -2,6 +2,7 @@
   /* border-top: solid 1px black; */
   border-bottom: solid 1px black;
   margin-bottom: 1em;
+  padding-bottom: 1em;
   width: 100%;
 }
 
@@ -20,5 +21,29 @@
   margin: 0 0.3em;
 }
 
-.other {
+.form input,
+.form select {
+  border-radius: 6px;
+  border-width: 1px;
+  padding: 9px 12px;
+  font-size: 16px;
+  height: 48px;
+  box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
+}
+
+.name,
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .cardInput {
+  padding-left: 50px;
+}
+
+.cardImage {
+  position: absolute;
+  top: 403px;
+  height: 48px;
+  width: 48px;
 }

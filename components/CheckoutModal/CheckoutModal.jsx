@@ -71,7 +71,15 @@ export default function CheckoutModal() {
           setSteps={setSteps}
         />
       )}
-      {steps[0] && <Payment />}
+      {steps[0] && (
+        <Payment
+          register={register}
+          handleSubmit={handleSubmit}
+          errors={errors}
+          setCustomerInfo={setCustomerInfo}
+          setSteps={setSteps}
+        />
+      )}
     </aside>
   );
 }

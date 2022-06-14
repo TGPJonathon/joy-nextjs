@@ -3,7 +3,13 @@ import { useState } from 'react';
 import classes from './Payment.module.css';
 import PaymentItem from './PaymentItem';
 
-export default function Payment() {
+export default function Payment({
+  register,
+  handleSubmit,
+  errors,
+  setCustomerInfo,
+  setSteps,
+}) {
   const [selected, setSelected] = useState('');
 
   return (
