@@ -1,0 +1,51 @@
+.name,
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .cardInput {
+  padding-left: 50px;
+}
+
+.cardImage {
+  position: absolute;
+  top: 403px;
+  height: 48px;
+  width: 48px;
+}
+
+.expSec {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.exp {
+  display: flex;
+  flex-direction: column;
+}
+
+.sec {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardBilling {
+  display: flex;
+}
+
+.cardBilling input {
+  height: 30px;
+  width: 30px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.cityZip {
+  display: flex;
+  justify-content: space-between;
+}

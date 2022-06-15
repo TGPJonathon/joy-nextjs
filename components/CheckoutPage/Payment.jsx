@@ -9,6 +9,8 @@ export default function Payment({
   errors,
   setCustomerInfo,
   setSteps,
+  customerInfo,
+  onSubmit,
 }) {
   const [selected, setSelected] = useState('');
 
@@ -24,6 +26,12 @@ export default function Payment({
         inputId="card"
         selected={selected}
         setSelected={setSelected}
+        register={register}
+        errors={errors}
+        setCustomerInfo={setCustomerInfo}
+        handleSubmit={handleSubmit}
+        customerInfo={customerInfo}
+        onSubmit={onSubmit}
       />
       <PaymentItem
         inputId="paypal"

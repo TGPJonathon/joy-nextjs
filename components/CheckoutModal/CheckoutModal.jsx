@@ -29,11 +29,28 @@ export default function CheckoutModal() {
     })
     .required();
 
+  const billingSchema = yup
+    .object({
+      billingName: yup.string().required('Please enter your name'),
+      billingAddress: yup.string().required('Please enter an address'),
+      billingApt: yup.string(),
+      billingZip: yup.string().required('Please enter your zip code'),
+      billingCity: yup.string().required('Please enter your city'),
+    })
+    .required();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ mode: 'all', resolver: yupResolver(schema) });
+
+  const onSubmit = (data) => {
+    setSteps([true]);
+    setCustomerInfo((prevState) => {
+      return { ...prevState, ...data };
+    });
+  };
 
   useEffect(() => {
     console.log(customerInfo);
@@ -67,8 +84,7 @@ export default function CheckoutModal() {
           register={register}
           handleSubmit={handleSubmit}
           errors={errors}
-          setCustomerInfo={setCustomerInfo}
-          setSteps={setSteps}
+          onSubmit={onSubmit}
         />
       )}
       {steps[0] && (
@@ -78,6 +94,8 @@ export default function CheckoutModal() {
           errors={errors}
           setCustomerInfo={setCustomerInfo}
           setSteps={setSteps}
+          customerInfo={customerInfo}
+          onSubmit={onSubmit}
         />
       )}
     </aside>
