@@ -1,3 +1,12 @@
+.error {
+  background-color: rgba(255, 99, 71, 0.3);
+}
+
+.errorMessage {
+  color: red;
+  font-size: 14px;
+}
+
 .name,
 .card {
   display: flex;
@@ -8,9 +17,13 @@
   padding-left: 50px;
 }
 
+.card {
+  position: relative;
+}
+
 .cardImage {
   position: absolute;
-  top: 403px;
+  top: 18px;
   height: 48px;
   width: 48px;
 }

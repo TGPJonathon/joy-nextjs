@@ -9,15 +9,10 @@ import Amex from '../../public/icons/american-express.svg';
 import ShippingForm from './ShippingForm';
 import classes from './CardForm.module.css';
 
-export default function CardForm({
-  customerInfo,
-  register,
-  errors,
-  onSubmit,
-  handleSubmit,
-}) {
+export default function CardForm({ customerInfo, register, errors }) {
   const [card, setCard] = useState(<CreditCard />);
   const [check, setCheck] = useState(true);
+
   const year = new Date().getFullYear();
   const { name, address, city, state, zip, country } = customerInfo;
   const billingAddress =
@@ -39,11 +34,20 @@ export default function CardForm({
         <label htmlFor="name">
           Name on card <span>*</span>
         </label>
-        <input type="text" name="name" id="name" />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          className={errors.name ? classes.error : ''}
+          {...register('name')}
+        />
+        {errors.name && (
+          <p className={classes.errorMessage}>{errors.name.message}</p>
+        )}
       </div>
       <div className={classes.card}>
         <label className={classes.cardIcon} htmlFor="card">
-          Card number <span>*</span>
+          Card number <span>*</span> (No Dashes)
         </label>
         <input
           onInput={(e) => {
@@ -78,11 +82,17 @@ export default function CardForm({
               if ([4, 9, 14].includes(length)) e.target.value += ' ';
             }
           }}
-          className={classes.cardInput}
+          className={
+            classes.cardInput + ' ' + (errors.card ? classes.error : '')
+          }
           type="tel"
           name="card"
           id="card"
+          {...register('card')}
         />
+        {errors.card && (
+          <p className={classes.errorMessage}>{errors.card.message}</p>
+        )}
         <span className={classes.cardImage}>{card}</span>
       </div>
       <div className={classes.expSec}>
@@ -91,7 +101,7 @@ export default function CardForm({
             Expiration Date <span>*</span>
           </label>
           <div className={classes.cardDate}>
-            <select name="exp" id="exp">
+            <select name="exp" id="exp" {...register('exp')}>
               {[...Array(12).keys()].map((item) => {
                 return (
                   <option key={item} value={item + 1}>
@@ -100,7 +110,7 @@ export default function CardForm({
                 );
               })}
             </select>
-            <select name="expYear" id="expYear">
+            <select name="expYear" id="expYear" {...register('expYear')}>
               {[...Array(20)]
                 .map((_, i) => year + i)
                 .map((item) => {
@@ -117,7 +127,16 @@ export default function CardForm({
           <label htmlFor="sec">
             Security Code <span>*</span>
           </label>
-          <input type="text" name="sec" id="sec" />
+          <input
+            className={errors.sec ? classes.error : ''}
+            type="text"
+            name="sec"
+            id="sec"
+            {...register('sec')}
+          />
+          {errors.sec && (
+            <p className={classes.errorMessage}>{errors.sec.message}</p>
+          )}
         </div>
       </div>
 
@@ -137,13 +156,7 @@ export default function CardForm({
         </div>
       </div>
       {!check && (
-        <ShippingForm
-          onSubmit={onSubmit}
-          register={register}
-          handleSubmit={handleSubmit}
-          errors={errors}
-          billing={true}
-        />
+        <ShippingForm register={register} errors={errors} billing={true} />
       )}
     </Fragment>
   );

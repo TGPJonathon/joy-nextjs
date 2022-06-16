@@ -3,15 +3,7 @@ import { useState } from 'react';
 import classes from './Payment.module.css';
 import PaymentItem from './PaymentItem';
 
-export default function Payment({
-  register,
-  handleSubmit,
-  errors,
-  setCustomerInfo,
-  setSteps,
-  customerInfo,
-  onSubmit,
-}) {
+export default function Payment({ setCustomerInfo, setSteps, customerInfo }) {
   const [selected, setSelected] = useState('');
 
   return (
@@ -26,12 +18,9 @@ export default function Payment({
         inputId="card"
         selected={selected}
         setSelected={setSelected}
-        register={register}
-        errors={errors}
         setCustomerInfo={setCustomerInfo}
-        handleSubmit={handleSubmit}
         customerInfo={customerInfo}
-        onSubmit={onSubmit}
+        setSteps={setSteps}
       />
       <PaymentItem
         inputId="paypal"

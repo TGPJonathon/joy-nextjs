@@ -1,7 +1,8 @@
+import { Fragment } from 'react';
+
 import { countryList, stateList } from './listOfStatesAndCountries';
 
 import classes from './ShippingForm.module.css';
-import { Fragment } from 'react';
 
 export default function ShippingForm({ register, errors, billing }) {
   return (
@@ -38,6 +39,7 @@ export default function ShippingForm({ register, errors, billing }) {
           </div>
         </div>
       )}
+
       <div className={classes.item}>
         <label>
           Country <span className={classes.required}>*</span>
@@ -56,58 +58,97 @@ export default function ShippingForm({ register, errors, billing }) {
           })}
         </select>
       </div>
+
       <div className={classes.item}>
         <label>
           Full Name <span className={classes.required}>*</span>
         </label>
         <input
-          className={errors.name ? classes.error : ''}
+          className={
+            (billing ? errors.billingName : errors.name) ? classes.error : ''
+          }
           {...register(billing ? 'billingName' : 'name')}
         />
-        {errors.name && (
-          <p className={classes.errorMessage}>{errors.name.message}</p>
-        )}
+        {billing
+          ? errors.billingName && (
+              <p className={classes.errorMessage}>
+                {errors.billingName.message}
+              </p>
+            )
+          : errors.name && (
+              <p className={classes.errorMessage}>{errors.name.message}</p>
+            )}
       </div>
+
       <div className={classes.item}>
         <label>
           Street Address <span className={classes.required}>*</span>
         </label>
         <input
-          className={errors.address ? classes.error : ''}
+          className={
+            (billing ? errors.billingAddress : errors.address)
+              ? classes.error
+              : ''
+          }
           {...register(billing ? 'billingAddress' : 'address')}
         />
-        {errors.address && (
-          <p className={classes.errorMessage}>{errors.address.message}</p>
-        )}
+        {billing
+          ? errors.billingAddress && (
+              <p className={classes.errorMessage}>
+                {errors.billingAddress.message}
+              </p>
+            )
+          : errors.address && (
+              <p className={classes.errorMessage}>{errors.address.message}</p>
+            )}
       </div>
+
       <div className={classes.item}>
         <label>Apt/ Suite/ Other</label>
         <input {...register(billing ? 'billingApt' : 'apt')} />
       </div>
+
       <div className={classes.cityZip}>
         <div className={classes.item}>
           <label>
             Zip Code <span className={classes.required}>*</span>
           </label>
           <input
-            className={errors.zip ? classes.error : ''}
+            className={
+              (billing ? errors.billingZip : errors.zip) ? classes.error : ''
+            }
             {...register(billing ? 'billingZip' : 'zip')}
           />
-          {errors.zip && (
-            <p className={classes.errorMessage}>{errors.zip.message}</p>
-          )}
+          {billing
+            ? errors.billingZip && (
+                <p className={classes.errorMessage}>
+                  {errors.billingZip.message}
+                </p>
+              )
+            : errors.zip && (
+                <p className={classes.errorMessage}>{errors.zip.message}</p>
+              )}
         </div>
+
         <div className={classes.item}>
           <label>
             City <span className={classes.required}>*</span>
           </label>
           <input
-            className={errors.city ? classes.error : ''}
+            className={
+              (billing ? errors.billingCity : errors.city) ? classes.error : ''
+            }
             {...register(billing ? 'billingCity' : 'city')}
           />
-          {errors.city && (
-            <p className={classes.errorMessage}>{errors.city.message}</p>
-          )}
+          {billing
+            ? errors.billingCity && (
+                <p className={classes.errorMessage}>
+                  {errors.billingCity.message}
+                </p>
+              )
+            : errors.city && (
+                <p className={classes.errorMessage}>{errors.city.message}</p>
+              )}
         </div>
       </div>
 
