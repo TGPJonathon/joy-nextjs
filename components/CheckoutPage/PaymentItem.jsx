@@ -34,11 +34,11 @@ export default function PaymentItem({
         .min(3, 'Must be at least 3 numbers')
         .max(4, "Can't be more than 4 numbers")
         .required('Please enter your security code'),
-      billingName: yup.string().required('Please enter your name'),
-      billingAddress: yup.string().required('Please enter an address'),
+      billingName: yup.string(),
+      billingAddress: yup.string(),
       billingApt: yup.string(),
-      billingZip: yup.string().required('Please enter your zip code'),
-      billingCity: yup.string().required('Please enter your city'),
+      billingZip: yup.string(),
+      billingCity: yup.string(),
     })
     .required();
 
@@ -67,6 +67,7 @@ export default function PaymentItem({
             name="payment"
             id={inputId}
             value={inputId}
+            className={classes.radio}
           />
           <label htmlFor="payment">Card</label>
         </div>
@@ -94,7 +95,9 @@ export default function PaymentItem({
             errors={errors}
             customerInfo={customerInfo}
           />
-          <button type="submit">Review Your Order</button>
+          <button className={classes.button} type="submit">
+            Review Your Order
+          </button>
         </form>
       )}
     </div>

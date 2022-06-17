@@ -30,7 +30,7 @@ export default function CardForm({ customerInfo, register, errors }) {
 
   return (
     <Fragment>
-      <div className={classes.name}>
+      <div className={classes.item}>
         <label htmlFor="name">
           Name on card <span>*</span>
         </label>
@@ -45,7 +45,7 @@ export default function CardForm({ customerInfo, register, errors }) {
           <p className={classes.errorMessage}>{errors.name.message}</p>
         )}
       </div>
-      <div className={classes.card}>
+      <div className={classes.item + ' ' + classes.card}>
         <label className={classes.cardIcon} htmlFor="card">
           Card number <span>*</span> (No Dashes)
         </label>
@@ -96,7 +96,7 @@ export default function CardForm({ customerInfo, register, errors }) {
         <span className={classes.cardImage}>{card}</span>
       </div>
       <div className={classes.expSec}>
-        <div className={classes.exp}>
+        <div className={classes.item}>
           <label htmlFor="exp">
             Expiration Date <span>*</span>
           </label>
@@ -123,7 +123,7 @@ export default function CardForm({ customerInfo, register, errors }) {
             </select>
           </div>
         </div>
-        <div className={classes.sec}>
+        <div className={classes.item}>
           <label htmlFor="sec">
             Security Code <span>*</span>
           </label>
@@ -146,7 +146,8 @@ export default function CardForm({ customerInfo, register, errors }) {
           type="checkbox"
           name="billing"
           id="billing"
-          onChange={() => setCheck(!check)}
+          onClick={() => setCheck(!check)}
+          {...register('sameBillingAddress')}
         />
         <div>
           <label htmlFor="billing">

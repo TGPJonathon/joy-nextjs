@@ -22,16 +22,6 @@ export default function Payment({ setCustomerInfo, setSteps, customerInfo }) {
         customerInfo={customerInfo}
         setSteps={setSteps}
       />
-      <PaymentItem
-        inputId="paypal"
-        selected={selected}
-        setSelected={setSelected}
-      />
-      <PaymentItem
-        inputId="gang"
-        selected={selected}
-        setSelected={setSelected}
-      />
     </aside>
   );
 }

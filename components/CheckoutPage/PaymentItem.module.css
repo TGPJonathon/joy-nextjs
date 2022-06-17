@@ -2,13 +2,18 @@
   border-bottom: solid 1px black;
   margin-bottom: 1em;
   padding-bottom: 1em;
-  width: 100%;
+  width: clamp(200px, 50vw, 750px);
 }
 
 .paymentElements {
   display: flex;
   justify-content: space-between;
   padding: 1em 0;
+  align-items: center;
+}
+
+.left {
+  display: flex;
   align-items: center;
 }
 
@@ -20,6 +25,11 @@
   margin: 0 0.3em;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .form input,
 .form select {
   border-radius: 6px;
@@ -27,5 +37,14 @@
   padding: 9px 12px;
   font-size: 16px;
   height: 48px;
-  box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1em;
 }
