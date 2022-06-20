@@ -7,6 +7,7 @@ import Shipping from '../CheckoutPage/Shipping';
 
 import classes from './CheckoutModal.module.css';
 import Payment from '../CheckoutPage/Payment';
+import Review from '../CheckoutPage/Review';
 
 export default function CheckoutModal() {
   const [customerInfo, setCustomerInfo] = useState({});
@@ -84,7 +85,7 @@ export default function CheckoutModal() {
           customerInfo={customerInfo}
         />
       )}
-      {steps[1] && <p>Hey</p>}
+      {steps[1] && <Review customerInfo={customerInfo} />}
     </aside>
   );
 }
