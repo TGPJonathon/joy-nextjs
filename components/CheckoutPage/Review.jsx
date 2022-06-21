@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+import { getShippingRates } from '../../lib/shipping';
 import Visa from '../../public/icons/visa.svg';
 import MasterCard from '../../public/icons/mastercard.svg';
 import Discover from '../../public/icons/discover.svg';
@@ -22,14 +24,32 @@ export default function Review({ customerInfo }) {
     expYear,
     sameBillingAddress,
   } = customerInfo;
+
   const cardDict = {
     3: [<Amex key={0} />, 'American Express'],
     4: [<Visa key={1} />, 'Visa'],
     5: [<MasterCard key={2} />, 'MasterCard'],
     6: [<Discover key={3} />, 'Discover'],
   };
-
   const currentCard = [cardDict[card[0]][0], cardDict[card[0]][1]];
+  const [shippingPrices, setShippingPrices] = useState([
+    'Free',
+    'Free',
+    'Free',
+  ]);
+
+  useEffect(() => {
+    getShippingRates(zip)
+      .then((response) => response)
+      .then((data) => {
+        const shippingRates = data.RateV4Response.Package.Postage;
+        setShippingPrices([
+          shippingRates[34].Rate.toFixed(2),
+          shippingRates[8].Rate.toFixed(2),
+          shippingRates[0].Rate.toFixed(2),
+        ]);
+      });
+  }, [zip]);
 
   return (
     <aside className={classes.review}>
@@ -156,7 +176,7 @@ export default function Review({ customerInfo }) {
                 </span>
               </div>
             </div>
-            <span>Free</span>
+            <span>${shippingPrices[0]}</span>
           </div>
           <div className={classes.x}>
             <div className={classes.test}>
@@ -168,7 +188,7 @@ export default function Review({ customerInfo }) {
                 </span>
               </div>
             </div>
-            <span>Free</span>
+            <span>${shippingPrices[1]}</span>
           </div>
           <div className={classes.x}>
             <div className={classes.test}>
@@ -180,7 +200,7 @@ export default function Review({ customerInfo }) {
                 </span>
               </div>
             </div>
-            <span>Free</span>
+            <span>${shippingPrices[2]}</span>
           </div>
         </div>
       </div>
