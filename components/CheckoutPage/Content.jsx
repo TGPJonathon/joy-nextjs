@@ -5,11 +5,9 @@ import { loadStripe } from '@stripe/stripe-js';
 
 import classes from './Content.module.css';
 import ItemCart from './ItemCart';
-import CheckoutModal from '../CheckoutModal/CheckoutModal';
 
 export default function Content({ cart, numItems, setCart }) {
   const [total, setTotal] = useState(0);
-  const [modalOpen, setModalOpen] = useState(false);
   const [newCart, setNewCart] = useState(
     Object.entries(cart).map(([id, obj]) => ({ id, ...obj }))
   );
@@ -95,6 +93,17 @@ export default function Content({ cart, numItems, setCart }) {
                 action="/api/checkout_sessions"
                 method="POST"
               >
+                {newCart.map(({ title, num }, index) => {
+                  return (
+                    <input
+                      style={{ display: 'none' }}
+                      key={index}
+                      name={title}
+                      id={title}
+                      value={num}
+                    />
+                  );
+                })}
                 <button type="submit" role="link" className={classes.button}>
                   Checkout
                 </button>
@@ -103,7 +112,6 @@ export default function Content({ cart, numItems, setCart }) {
           )}
         </div>
       </section>
-      {modalOpen && <CheckoutModal />}
     </Fragment>
   );
 }

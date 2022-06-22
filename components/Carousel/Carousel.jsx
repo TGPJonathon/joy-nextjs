@@ -1,8 +1,6 @@
 import { Carousel as Loop } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import Card from '../Card/Card';
-
 import classes from './Carousel.module.css';
 
 export default function Carousel({ Cards }) {
@@ -22,15 +20,7 @@ export default function Carousel({ Cards }) {
                 target="_blank"
                 href="https://eventbrite.com"
                 rel="noopener noreferrer"
-              >
-                <Card
-                  title={card.attributes.Title}
-                  date={card.attributes.Time}
-                  time={card.attributes.Time}
-                  text={card.attributes.text}
-                  location={card.attributes.location}
-                />
-              </a>
+              ></a>
             </div>
           ))}
       </Loop>
