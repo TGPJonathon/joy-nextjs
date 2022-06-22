@@ -6,9 +6,8 @@ import Link from 'next/link';
 import HeroComponent from '../../components/Hero/HeroComponent';
 import StoreElement from '../../components/StorePage/StoreElement';
 
-export default function Store() {
-  //Replace with actual store items from database
-  const array = [1, 2, 3, 4];
+export default function Store({ items }) {
+  const { data } = items;
 
   return (
     <Fragment>
@@ -29,11 +28,16 @@ export default function Store() {
         }}
       >
         <Container style="grid">
-          {array.map((items, index) => {
+          {data.map((item, index) => {
+            const { attributes } = item;
             return (
-              <Link key={index} href={`/store/${index}`}>
+              <Link key={index} href={`/store/${item.id}`}>
                 <a>
-                  <StoreElement />
+                  <StoreElement
+                    image={`http://localhost:1337${attributes.Image.data.attributes.url}`}
+                    title={attributes.Name}
+                    price={`$${attributes.Price}`}
+                  />
                 </a>
               </Link>
             );
@@ -42,4 +46,15 @@ export default function Store() {
       </main>
     </Fragment>
   );
+}
+
+export async function getStaticProps() {
+  const result = await fetch('http://localhost:1337/api/stores?populate=*');
+  const items = await result.json();
+
+  return {
+    props: {
+      items,
+    },
+  };
 }

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import classes from './ItemCart.module.css';
 
 export default function ItemCart({
-  imageSrc,
+  image,
   name,
   price,
   num,
@@ -16,11 +16,11 @@ export default function ItemCart({
 
   useEffect(() => {
     const item = {};
-    item[id] = { title: name, price: price, num: quantity };
+    item[id] = { title: name, price: price, num: quantity, image: image };
     setCart((prevCart) => {
       return { ...prevCart, ...item };
     });
-  }, [quantity, id, name, price, setCart]);
+  }, [quantity, id, name, price, setCart, image]);
 
   const removeItem = () => {
     setCart((prevCart) => {
@@ -34,7 +34,7 @@ export default function ItemCart({
     <div className={classes.item}>
       <div className={classes.left}>
         <div className={classes.image}>
-          <Image src="/book1.webp" alt="test" height={200} width={200} />
+          <Image src={image} alt="test" height={200} width={200} />
         </div>
 
         <div className={classes.name_price}>

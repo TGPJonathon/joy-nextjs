@@ -1,15 +1,21 @@
 import { Fragment, useState, useEffect } from 'react';
 import Link from 'next/link';
 
+import { loadStripe } from '@stripe/stripe-js';
+
 import classes from './Content.module.css';
 import ItemCart from './ItemCart';
 import CheckoutModal from '../CheckoutModal/CheckoutModal';
 
 export default function Content({ cart, numItems, setCart }) {
   const [total, setTotal] = useState(0);
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const [newCart, setNewCart] = useState(
     Object.entries(cart).map(([id, obj]) => ({ id, ...obj }))
+  );
+
+  const stripePromise = loadStripe(
+    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
   );
 
   useEffect(() => {
@@ -25,6 +31,20 @@ export default function Content({ cart, numItems, setCart }) {
     setNewCart(Object.entries(cart).map(([id, obj]) => ({ id, ...obj })));
   }, [cart]);
 
+  useEffect(() => {
+    // Check to see if this is a redirect back from Checkout
+    const query = new URLSearchParams(window.location.search);
+    if (query.get('success')) {
+      console.log('Order placed! You will receive an email confirmation.');
+    }
+
+    if (query.get('canceled')) {
+      console.log(
+        'Order canceled -- continue to shop around and checkout when you’re ready.'
+      );
+    }
+  }, []);
+
   return (
     <Fragment>
       <section className={classes.pay}>
@@ -34,7 +54,7 @@ export default function Content({ cart, numItems, setCart }) {
           </p>
         </div>
         <div className={classes.middle}>
-          {newCart.map(({ id, title, price, num }) => {
+          {newCart.map(({ id, title, price, num, image }) => {
             return (
               <div className={classes.itemCart} key={id}>
                 <ItemCart
@@ -43,6 +63,7 @@ export default function Content({ cart, numItems, setCart }) {
                   price={price}
                   num={num}
                   id={id}
+                  image={image}
                 />
               </div>
             );
@@ -69,7 +90,15 @@ export default function Content({ cart, numItems, setCart }) {
               <p className={classes.shipping}>
                 Shipping & taxes calculated at checkout
               </p>
-              <button className={classes.button}>Checkout</button>
+              <form
+                className={classes.form}
+                action="/api/checkout_sessions"
+                method="POST"
+              >
+                <button type="submit" role="link" className={classes.button}>
+                  Checkout
+                </button>
+              </form>
             </div>
           )}
         </div>

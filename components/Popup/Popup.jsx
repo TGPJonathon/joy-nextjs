@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import classes from './Popup.module.css';
 
-export default function Popup() {
+export default function Popup({ image, name, price }) {
   const [xClicked, setXClicked] = useState(false);
 
   if (xClicked) {
@@ -24,10 +24,10 @@ export default function Popup() {
           </div>
           <div className={classes.middle}>
             <div className={classes.image}>
-              <Image src="/book1.webp" alt="test" height={100} width={100} />
+              <Image src={image} alt="test" height={100} width={100} />
             </div>
             <div className={classes.content}>
-              <p>Growing Pains: Clean Version</p> <p>$9.99</p>
+              <p>{name}</p> <p>{price}</p>
             </div>
           </div>
           <div className={classes.bottom}>

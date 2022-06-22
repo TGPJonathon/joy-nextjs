@@ -5,18 +5,19 @@ import Parallax from '../Parallax/Parallax';
 import Popup from '../Popup/Popup';
 import classes from './ItemPage.module.css';
 
-export default function ItemPage() {
+export default function ItemPage({ image, name, price, description, id }) {
   const value = useContext(AppContext);
   const [quantity, setQuantity] = useState(1);
   const [itemAdded, setItemAdded] = useState(false);
 
   const addItemToCart = () => {
-    const x = 9;
+    const x = id;
     const item = {};
     item[x] = {
-      title: 'Growing Pains: Clean Edition',
-      price: '$9.99',
+      title: name,
+      price: price,
       num: quantity,
+      image: image,
     };
     value.setCart({ ...value.cart, ...item });
     console.log(value.cart);
@@ -31,21 +32,14 @@ export default function ItemPage() {
       <Parallax image="/temp-contact2.jpg" text="Merch" />
       <section className={classes.flex}>
         <div className={classes.image}>
-          <Image src="/book1.webp" alt="test" height={800} width={800} />
+          <Image src={image} alt="test" height={800} width={800} />
         </div>
         <div className={classes.info}>
           <div className={classes.text}>
-            <p className={classes.name}>Growing Pains: Clean Version</p>
-            <p className={classes.price}>$9.99</p>
+            <p className={classes.name}>{name}</p>
+            <p className={classes.price}>{price}</p>
             <div className={classes.description}>
-              <p>
-                Growing Pains explores the pains of navigating through life as a
-                young, black woman by asking the author, the reader, and God
-                difficult questions. Each poem is an emotional meditation that
-                demands to be deeply examined. Growing Pains is a book of woven
-                stories that say we have survived our darkest moments thus far,
-                and we can survive anything else that may come our way.
-              </p>
+              <p>{description}</p>
             </div>
           </div>
 
@@ -74,7 +68,7 @@ export default function ItemPage() {
           </button>
         </div>
       </section>
-      {itemAdded && <Popup />}
+      {itemAdded && <Popup image={image} name={name} price={price} />}
     </Fragment>
   );
 }

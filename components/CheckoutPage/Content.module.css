@@ -61,6 +61,10 @@
   align-self: flex-end;
 }
 
+.form {
+  align-self: flex-end;
+}
+
 .cart {
   font-size: 30px;
 }
