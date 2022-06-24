@@ -12,3 +12,9 @@
 .expand:hover {
   opacity: 0.7;
 }
+
+@media (max-width: 650px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

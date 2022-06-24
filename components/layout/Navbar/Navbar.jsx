@@ -10,11 +10,12 @@ import CheckoutCart from '../../CheckoutCart/CheckoutCart';
 
 export default function Navbar() {
   const value = useContext(AppContext);
+  const numItems = Object.keys(value.cart).length;
   const cart = (
     <li className={classes.cart}>
       <Link href="/checkout">
         <a>
-          <CheckoutCart quantity={Object.keys(value.cart).length} />
+          <CheckoutCart quantity={numItems} />
         </a>
       </Link>
     </li>
@@ -49,15 +50,12 @@ export default function Navbar() {
           {cart}
         </ul>
         <div className={classes.mobilenav}>
-          <MobileNav />
+          <MobileNav numItems={numItems} />
           {Object.keys(value.cart).length > 0 && (
             <li className={classes.cart}>
               <Link href="/checkout">
                 <a>
-                  <CheckoutCart
-                    mobile={true}
-                    quantity={Object.keys(value.cart).length}
-                  />
+                  <CheckoutCart mobile={true} quantity={numItems} />
                 </a>
               </Link>
             </li>

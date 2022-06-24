@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Fragment } from 'react';
 import Image from 'next/image';
 
 import classes from './ItemCart.module.css';
@@ -13,6 +13,33 @@ export default function ItemCart({
   setCart,
 }) {
   const [quantity, setQuantity] = useState(num);
+  const itemOptions = (
+    <Fragment>
+      <p onClick={removeItem} className={classes.remove}>
+        Remove
+      </p>
+      <select
+        className={classes.select}
+        defaultValue={num}
+        name="quantity"
+        id="quantity"
+        onChange={(e) => setQuantity(e.target.value)}
+      >
+        {Array(50)
+          .fill(undefined)
+          .map((n, i) => {
+            return (
+              <option value={i + 1} key={i + 1}>
+                {i + 1}
+              </option>
+            );
+          })}
+      </select>
+      <p className={classes.price}>
+        ${(quantity * price.substring(1)).toFixed(2)}
+      </p>
+    </Fragment>
+  );
 
   useEffect(() => {
     const item = {};
@@ -39,35 +66,11 @@ export default function ItemCart({
 
         <div className={classes.name_price}>
           <p>{name}</p> <p>{price}</p>
+          <div className={classes.inside}>{itemOptions}</div>
         </div>
       </div>
 
-      <div className={classes.right}>
-        <p onClick={removeItem} className={classes.remove}>
-          Remove
-        </p>
-
-        <select
-          className={classes.select}
-          defaultValue={num}
-          name="quantity"
-          id="quantity"
-          onChange={(e) => setQuantity(e.target.value)}
-        >
-          {Array(50)
-            .fill(undefined)
-            .map((n, i) => {
-              return (
-                <option value={i + 1} key={i + 1}>
-                  {i + 1}
-                </option>
-              );
-            })}
-        </select>
-        <p className={classes.price}>
-          ${(quantity * price.substring(1)).toFixed(2)}
-        </p>
-      </div>
+      <div className={classes.right}>{itemOptions}</div>
     </div>
   );
 }

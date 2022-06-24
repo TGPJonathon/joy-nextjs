@@ -87,3 +87,12 @@
     background-position: center top !important;
   }
 }
+
+@media (max-width: 780px) {
+  .total,
+  .subtotal,
+  .shipping,
+  .form {
+    align-self: center;
+  }
+}

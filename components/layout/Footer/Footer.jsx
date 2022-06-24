@@ -5,6 +5,15 @@ import classes from './Footer.module.css';
 import SocialLinks from '../../SocialLinks/SocialLinks';
 
 export default function Footer() {
+  const emailHandler = async (e) => {
+    const response = await fetch('/api/email', {
+      method: 'POST',
+      body: JSON.stringify(e.target[0].value),
+    });
+    const data = await response.json();
+    console.log(data);
+  };
+
   return (
     <footer className={classes.flex}>
       <section className={classes.space}>
@@ -31,14 +40,28 @@ export default function Footer() {
       </section>
       <section className={classes.space}>
         <p>Stay in Touch!</p>
-        <input
-          className={classes.input}
-          placeholder="E-mail"
-          type="email"
-          name="email"
-          id="email"
-        />
-        <button className={classes.button}>Send!</button>
+        <div className={classes.form}>
+          <form
+            action="/api/email"
+            onSubmit={(e) => {
+              e.preventDefault();
+              emailHandler(e);
+            }}
+          >
+            <input
+              className={classes.input}
+              placeholder="E-mail"
+              type="email"
+              name="email"
+              id="email"
+              minLength="8"
+              required
+            />
+            <button type="submit" className={classes.button}>
+              Send!
+            </button>
+          </form>
+        </div>
       </section>
     </footer>
   );

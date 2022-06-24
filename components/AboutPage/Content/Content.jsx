@@ -13,10 +13,12 @@ export default function Content() {
               Hello! My name is Joy, and I got a lot to talk about
             </span>
           </div>
-          <ParallaxBanner
-            layers={[{ image: '/joy/joy7.jpg', speed: -50 }]}
-            className={classes.banner}
-          />
+          <div className={classes.image}>
+            <ParallaxBanner
+              layers={[{ image: '/joy/joy7.jpg', speed: -50 }]}
+              className={classes.banner}
+            />
+          </div>
         </section>
 
         <section className={classes.middle}>
@@ -25,36 +27,44 @@ export default function Content() {
           </div>
           <div className={classes.middle__middle}>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              et quae aspernatur dignissimos! Facilis natus quo eos minus eum
-              cupiditate officiis sapiente vero, in, sint reiciendis ducimus
-              voluptatem fuga expedita.
+              I am an award-winning slam champion, open mic host, content
+              creator, closet Soundcloud rapper, and social media manager based
+              out of the DMV area. I graduated from Morgan State University in
+              2018, with a B.A. in Psychology and a minor in Creative Writing.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem natus ullam nesciunt enim saepe nobis unde quam,
-              nostrum odio, ducimus quod possimus impedit magni accusantium,
-              libero placeat vitae temporibus quaerat! Lorem ipsum dolor sit
-              amet consectetur adipisicing elit. Non facere ut magni porro
-              quidem ipsa, excepturi, perferendis nesciunt eveniet earum
-              architecto laudantium totam veritatis quos amet natus corrupti
-              omnis saepe!
+              My debut collection of poetry, Growing Pains, was published in
+              2020 at the beginning of the current global pandemic. I'm the
+              Founder of Oxon Hill High School's Slam Team, founder of MSUPoets,
+              and former member of both the Baltimore City Youth Poetry Slam
+              Team and Words Beats and Life Youth Poetry Slam Teams. I try to
+              explore art not only through writing but through multi-media
+              production and content creation.
             </p>
           </div>
           <div className={classes.middle__right}></div>
         </section>
 
         <section className={classes.bottom}>
-          <ParallaxBanner
-            layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
-            // className="aspect-[2/1]"
-          />
+          <div className={classes.image}>
+            <ParallaxBanner
+              layers={[{ image: '/joy/joy7.jpg', speed: -50 }]}
+              className={classes.banner}
+            />
+          </div>
           <div className={classes.bottom__right}>
             <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Exercitationem sunt temporibus amet vel quidem doloremque
-              provident, dicta dolores vero, similique tenetur itaque dolorum
-              quas ipsa tempore quae! Voluptas, illo laborum?
+              Her creative portfolio explores themes of womanhood, hip-hop,
+              blackness, love, mental health, substance abuse, and race
+              relations, utilizing a multitude of creative lenses. Beginning her
+              poetry career in 2013, Joy has won multiple awards including DC
+              Youth Slam's MC Olympics in 2014, 3rd Place in Baltimore's Grand
+              Slam Championship in 2016, and is a former Baltimore City Youth
+              Poetry Ambassador (2015). She is also an NAACP ACT-SO finalist
+              receiving silver and bronze medals for poetry and oratory (2015).
+              She is a 2xs competitor at the Brave New Voices international
+              poetry slam, consecutively performing on the final stage both
+              years she competed in the competition.
             </span>
           </div>
         </section>
@@ -69,10 +79,12 @@ export default function Content() {
               <button className={classes.button}>Buy Merch!</button>
             </div>
           </div>
-          <ParallaxBanner
-            layers={[{ image: '/test-picture3.jpg', speed: -50 }]}
-            // className="aspect-[2/1]"
-          />
+          <div className={classes.image}>
+            <ParallaxBanner
+              layers={[{ image: '/joy/joy7.jpg', speed: -50 }]}
+              className={classes.banner}
+            />
+          </div>
         </section>
       </article>
     </Fragment>

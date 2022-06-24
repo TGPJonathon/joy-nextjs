@@ -3,6 +3,7 @@
   justify-content: space-between;
   margin: 2em 0;
   width: 1000px;
+  flex-wrap: wrap;
 }
 
 .left,
@@ -36,4 +37,28 @@
 .price {
   margin-left: 1em;
   margin-right: 1em;
+}
+
+.inside {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .item {
+    justify-content: center;
+    margin-bottom: 4em;
+  }
+
+  .inside {
+    display: flex;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .left {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
