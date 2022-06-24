@@ -28,6 +28,10 @@
   height: 100%;
 }
 
+.banner > div {
+  top: -169px !important;
+}
+
 .middle {
   height: 50vh;
 }
@@ -186,5 +190,9 @@
 
   .banner {
     height: 100%;
+  }
+
+  .banner > div {
+    top: -300px !important;
   }
 }

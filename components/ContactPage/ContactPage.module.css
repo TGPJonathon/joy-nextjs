@@ -22,6 +22,11 @@
   width: 50% !important;
 }
 
+.banner > div {
+  top: 0 !important;
+  left: -268px !important;
+}
+
 .mobile {
   display: none;
   height: 30vh;
@@ -37,6 +42,10 @@
   }
   .banner {
     display: none;
+  }
+
+  .mobile > div {
+    top: 0 !important;
   }
 
   .mobile {
