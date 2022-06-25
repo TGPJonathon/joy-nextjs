@@ -1,0 +1,62 @@
+.background {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.landing,
+.eventSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image,
+.image span {
+  width: 50vw;
+  height: 100vh !important;
+}
+
+.image {
+  filter: brightness(70%);
+}
+
+.interest {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+}
+
+.landingTitle {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.button {
+  color: black;
+  background-color: white;
+  border-color: white;
+  border-radius: 10px;
+}
+
+.listOfEvents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.eventElements {
+  margin: 1em 3em;
+}
+
+@media (max-width: 1600px) {
+  .image,
+  .image span {
+    width: 100vw;
+  }
+}

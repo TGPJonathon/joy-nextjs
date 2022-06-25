@@ -1,0 +1,69 @@
+.eventCard {
+  height: 350px;
+  width: 350px;
+  position: relative;
+  margin: 1em 0;
+}
+
+.backgroundImage {
+  position: relative;
+  filter: brightness(40%);
+}
+
+.titleDate {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  top: 0;
+  width: 100%;
+}
+
+.name {
+  margin-left: 1em;
+  margin-top: 1em;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.date {
+  width: 130px;
+  margin: 0 1em;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  word-spacing: 100vw;
+}
+
+.eventInfo {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  bottom: 0;
+  width: 100%;
+}
+
+.location,
+.time {
+  margin: 1em 1em;
+  font-weight: 500;
+}
+
+.icon {
+  margin-right: 0.5em;
+}
+
+.icon svg {
+  height: 24px;
+  width: 24px;
+}
+
+.button {
+  background-color: white;
+  margin: 1em 1em;
+  border-radius: 10px;
+}
