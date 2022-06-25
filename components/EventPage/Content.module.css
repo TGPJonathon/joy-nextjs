@@ -50,13 +50,15 @@
   justify-content: center;
 }
 
-.eventElements {
-  margin: 1em 3em;
-}
-
 @media (max-width: 1600px) {
   .image,
   .image span {
     width: 100vw;
+  }
+}
+
+@media (min-width: 700px) {
+  .eventElements {
+    margin: 0 1em;
   }
 }
