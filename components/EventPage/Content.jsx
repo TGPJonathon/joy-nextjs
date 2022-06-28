@@ -29,8 +29,13 @@ export default function Content() {
         </section>
       </section>
       <section className={classes.eventSection}>
-        <p id="events">Events</p>
-        <div className={classes.listOfEvents}>
+        <p className={classes.events} id="events">
+          Upcoming Events
+        </p>
+        <p className={classes.noEvents}>
+          There Are Currently No Upcoming Events
+        </p>
+        {/* <div className={classes.listOfEvents}>
           <div className={classes.eventElements}>
             <EventCard />
           </div>
@@ -43,7 +48,7 @@ export default function Content() {
           <div className={classes.eventElements}>
             <EventCard />
           </div>
-        </div>
+        </div> */}
       </section>
     </Fragment>
   );

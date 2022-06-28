@@ -5,6 +5,11 @@
   max-width: 500px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
 .name,
 .email,
 .message {

@@ -30,9 +30,9 @@ const command = new SendEmailCommand(params);
 export default async function handler(req, res) {
   console.log(req.body);
   try {
-    const data = await client.send(command);
+    // const data = await client.send(command);
     // process data.
-    console.log(data);
+    // console.log(data);
     console.log('Should be something here');
     return res.status(200).json({ message: 'Successfully sent email' });
   } catch (error) {
