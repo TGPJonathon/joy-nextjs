@@ -7,7 +7,7 @@
   background-color: white;
   margin: 0 5vw;
   position: relative;
-  padding: 2em 4em;
+  padding: 2em 1em;
 }
 
 .start {
@@ -37,7 +37,7 @@
 }
 
 .title {
-  font-size: 40px;
+  font-size: clamp(1rem, 2vw, 2rem);
   margin-bottom: 1em;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .author {
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 2em;
 }
 
@@ -64,9 +64,9 @@
 .content__text {
   align-self: center;
   justify-self: center;
-  max-width: 800px;
+  max-width: 1085px;
   line-height: 2em;
-  font-size: clamp(1rem, 1vw, 1.3rem);
+  font-size: clamp(0.9rem, 1vw, 1.3rem);
   text-align: justify;
 }
 
@@ -104,5 +104,27 @@
 @media (min-width: 1600px) {
   .post {
     margin: 0 25%;
+  }
+}
+
+@media (max-width: 370px) {
+  .joy,
+  .date,
+  .time {
+    margin: 0 0;
+  }
+
+  .date {
+    width: 79px;
+  }
+
+  .time {
+    width: 75px;
+  }
+}
+
+@media (max-width: 500px) {
+  .recent_posts {
+    justify-content: center;
   }
 }

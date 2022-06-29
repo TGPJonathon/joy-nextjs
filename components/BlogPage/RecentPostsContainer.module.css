@@ -1,0 +1,19 @@
+.recentPosts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recentPosts__margins {
+  margin: 1em 1em;
+  width: 1000px;
+  max-width: 100%;
+  min-width: 350px;
+  padding: 0 1em;
+}
+
+.recentPosts__title {
+  align-self: flex-start;
+  font-size: 2rem;
+}

@@ -1,0 +1,55 @@
+.recentPost {
+  display: flex;
+  margin-bottom: 2.5em;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em;
+}
+
+.postTitle,
+.author,
+.postDescription {
+  margin: 0 0;
+}
+
+.postTitle {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.3em;
+}
+
+.author {
+  margin-bottom: 2em;
+}
+
+.postDescription {
+  margin-bottom: 2em;
+  max-width: 500px;
+  line-height: 1.7em;
+}
+
+.link {
+  background-color: black;
+  color: white;
+  width: 148px;
+  padding: 1em 1em;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .recentPost {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .link {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+  }
+}

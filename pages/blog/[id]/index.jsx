@@ -4,9 +4,8 @@ import Posts from '../../../components/BlogPage/Posts';
 export default function Blog({ imageSrc, title, content }) {
   return (
     <Fragment>
-      <main>
-        <Posts
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis eveniet nobis pariatur nemo, porro vero, soluta et omnis nam voluptatum officiis, voluptas dolorem veritatis minus earum laborum magnam repellendus!
+      <Posts
+        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis eveniet nobis pariatur nemo, porro vero, soluta et omnis nam voluptatum officiis, voluptas dolorem veritatis minus earum laborum magnam repellendus!
         Ipsum dignissimos accusamus praesentium at voluptas eius beatae ratione dolore fuga sit. Fuga, officiis veniam tempore dignissimos magni dolor distinctio, voluptate doloribus quidem at quas explicabo consequuntur vitae aliquid eius.
         Impedit quidem eos omnis laudantium perferendis enim aliquid iste harum, obcaecati ex ad, magnam architecto optio veniam! Autem sapiente temporibus reiciendis placeat quos deleniti, nobis, omnis ab et odit tenetur.
         Esse modi voluptatibus eligendi, ullam eaque totam deserunt? Totam, corrupti ducimus? Distinctio molestiae nesciunt dicta quas perferendis ab natus ipsum magni rem modi tempora eligendi maiores, illo mollitia alias aut.
@@ -72,8 +71,7 @@ export default function Blog({ imageSrc, title, content }) {
         Earum odio porro sapiente! Laudantium a incidunt sunt impedit nobis doloribus nam, officia, culpa possimus dolorum modi, similique dolorem quo? Perspiciatis culpa consectetur explicabo aperiam animi asperiores provident natus error!
         Temporibus, eos. Architecto modi hic at ut impedit odio dolorum, est non repudiandae a harum nemo iusto atque eos qui veniam debitis ullam, corrupti delectus porro optio fugit et! Suscipit.
         Totam cum perspiciatis sed enim fugiat sequi pariatur corrupti ipsa tenetur ad quaerat odit nulla neque aspernatur necessitatibus vitae, tempore optio expedita minus modi harum dolor. Commodi ipsam ea culpa."
-        />
-      </main>
+      />
     </Fragment>
   );
 }

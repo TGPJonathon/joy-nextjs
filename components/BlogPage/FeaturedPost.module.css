@@ -1,7 +1,6 @@
 .featuredPost {
   position: relative;
-  /* width: 100vw; */
-  height: 100vh;
+  height: 50vh;
 }
 
 .image,
@@ -9,7 +8,7 @@
   width: 100% !important;
   height: 100% !important;
   cursor: pointer;
-  filter: brightness(90%);
+  filter: brightness(80%);
 }
 
 .image img {
@@ -57,18 +56,8 @@
 }
 
 .button {
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-}
-
-.recentPosts {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 1176px;
-}
-
-.test {
+  border: none;
+  padding: 0 0;
+  font-size: 16px;
+  color: white;
 }
