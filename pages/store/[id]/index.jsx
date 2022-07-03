@@ -10,7 +10,7 @@ export default function Store({ item }) {
       <main>
         <ItemPage
           id={data.id}
-          image={`http://localhost:1337${attributes.Image.data.attributes.url}`}
+          image={`${attributes.Image.data.attributes.url}`}
           name={attributes.Name}
           price={`$${attributes.Price}`}
           description={attributes.Description}
@@ -23,7 +23,7 @@ export default function Store({ item }) {
 export async function getStaticProps(context) {
   const { params } = context;
   const result = await fetch(
-    `http://localhost:1337/api/stores/${params.id}?populate=*`
+    `https://api.joyangelica.com/api/stores/${params.id}?populate=*`
   );
   const item = await result.json();
 
@@ -35,7 +35,7 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
-  const items = await fetch('http://localhost:1337/api/stores');
+  const items = await fetch('https://api.joyangelica.com/api/stores');
   const results = await items.json();
   const { data } = results;
 

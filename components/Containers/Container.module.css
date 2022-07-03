@@ -1,8 +1,3 @@
-.grid,
-.flex {
-  /* background-color: #d7a86e; */
-}
-
 .grid {
   display: grid;
   padding: 2em 5%;
@@ -11,13 +6,6 @@
   grid-auto-flow: row;
   justify-content: center;
   max-width: 1700px;
-}
-
-.flex {
-  padding: 2em 5%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 
 @media (max-width: 900px) {

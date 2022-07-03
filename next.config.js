@@ -14,6 +14,6 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['localhost'],
+    domains: ['strapi-joy.s3.amazonaws.com'],
   },
 };

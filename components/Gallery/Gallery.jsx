@@ -12,7 +12,7 @@ export default function Gallery() {
   const images = ['pic1', 'pic2', 'pic3', 'pic4', 'pic5'];
 
   return (
-    <section className={classes.gallery}>
+    <section className={classes.gallery} id="gallery">
       {images.map((image, index) => {
         return (
           <div

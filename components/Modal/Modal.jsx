@@ -14,7 +14,7 @@ export default function Modal({ content, visible, onClose }) {
   return (
     <div className={classes.modal}>
       <div className={classes.content}>
-        <div className={classes.image}>{content}</div>
+        {content}
         <div className={classes.close}>
           <button onClick={() => onClose()} className={classes.close}>
             Close

@@ -3,54 +3,59 @@ import { Fragment } from 'react';
 import Container from '../../components/Containers/Container';
 import Link from 'next/link';
 
-import HeroComponent from '../../components/Hero/HeroComponent';
 import StoreElement from '../../components/StorePage/StoreElement';
+import Content from './Content';
 
 export default function Store({ items }) {
   const { data } = items;
+  console.log(data);
 
   return (
     <Fragment>
-      <header style={{ height: '25vh' }}>
-        <HeroComponent
-          imageSrc="/temp-contact.jpg"
-          alt="temp picture"
-          pictureClass="background_picture_header"
-          filter={true}
-          title="Merch"
-        />
-      </header>
-      <main
-        style={{
-          display: 'flex',
-          // backgroundColor: '#d7a86e',
-          justifyContent: 'center',
-        }}
-      >
-        <Container style="grid">
-          {data.map((item, index) => {
-            const { attributes } = item;
-            return (
-              <Link key={index} href={`/store/${item.id}`}>
-                <a>
-                  <StoreElement
-                    image={`http://localhost:1337${attributes.Image.data.attributes.url}`}
-                    title={attributes.Name}
-                    price={`$${attributes.Price}`}
-                  />
-                </a>
-              </Link>
-            );
-          })}
-        </Container>
-      </main>
+      <Content />
+      {/* <Container style="grid">
+        {data.map((item, index) => {
+          const { attributes } = item;
+          return (
+            <Link key={index} href={`/store/${item.id}`}>
+              <a>
+                <StoreElement
+                  // image={`${attributes.Image.data.attributes.url}`}
+                  // title={attributes.Name}
+                  // price={`$${attributes.Price}`}
+                  image={item.image}
+                  title={item.title}
+                  price={`$${item.price}`}
+                />
+              </a>
+            </Link>
+          );
+        })}
+      </Container> */}
     </Fragment>
   );
 }
 
 export async function getStaticProps() {
-  const result = await fetch('http://localhost:1337/api/stores?populate=*');
-  const items = await result.json();
+  // const result = await fetch(
+  //   'https://api.joyangelica.com/api/stores?populate=*'
+  // );
+  // const items = await result.json();
+
+  const items = {
+    data: [
+      {
+        image: '/book1.webp',
+        title: 'Growing Pains: Clean Version',
+        price: '9.99',
+      },
+      {
+        image: '/book1.webp',
+        title: 'Growing Pains: Clean Version',
+        price: '9.99',
+      },
+    ],
+  };
 
   return {
     props: {

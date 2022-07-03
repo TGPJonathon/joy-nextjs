@@ -8,11 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
-.content {
+/* .content {
   max-width: 800px;
-}
+} */
 
 .close {
   background-color: black;

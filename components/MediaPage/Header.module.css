@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: #cc704b;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: clamp(2rem, 2vw, 3rem);
+  margin: 0 0;
+  cursor: pointer;
+}
+.bar {
+  margin: 0 1em;
+}
+
+.text:hover {
+  opacity: 0.5;
+}
