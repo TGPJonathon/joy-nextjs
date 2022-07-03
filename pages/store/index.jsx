@@ -1,10 +1,6 @@
 import { Fragment } from 'react';
-
-import Container from '../../components/Containers/Container';
-import Link from 'next/link';
-
-import StoreElement from '../../components/StorePage/StoreElement';
-import Content from './Content';
+import Header from '../../components/StorePage/Header.jsx';
+import StoreItems from '../../components/StorePage/StoreItems';
 
 export default function Store({ items }) {
   const { data } = items;
@@ -12,26 +8,8 @@ export default function Store({ items }) {
 
   return (
     <Fragment>
-      <Content />
-      {/* <Container style="grid">
-        {data.map((item, index) => {
-          const { attributes } = item;
-          return (
-            <Link key={index} href={`/store/${item.id}`}>
-              <a>
-                <StoreElement
-                  // image={`${attributes.Image.data.attributes.url}`}
-                  // title={attributes.Name}
-                  // price={`$${attributes.Price}`}
-                  image={item.image}
-                  title={item.title}
-                  price={`$${item.price}`}
-                />
-              </a>
-            </Link>
-          );
-        })}
-      </Container> */}
+      <Header />
+      <StoreItems items={data} />
     </Fragment>
   );
 }
@@ -48,11 +26,13 @@ export async function getStaticProps() {
         image: '/book1.webp',
         title: 'Growing Pains: Clean Version',
         price: '9.99',
+        id: 1,
       },
       {
         image: '/book1.webp',
         title: 'Growing Pains: Clean Version',
         price: '9.99',
+        id: 2,
       },
     ],
   };

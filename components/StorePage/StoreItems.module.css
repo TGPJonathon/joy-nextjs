@@ -1,4 +1,4 @@
-.grid {
+.storeItems {
   display: grid;
   padding: 2em 5%;
   grid-template-columns: repeat(3, 1fr);
@@ -9,13 +9,13 @@
 }
 
 @media (max-width: 900px) {
-  .grid {
+  .storeItems {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  .grid {
+  .storeItems {
     grid-template-columns: 1fr;
   }
 }

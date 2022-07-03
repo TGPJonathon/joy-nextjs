@@ -39,8 +39,6 @@ export default async function handler(req, res) {
     // error handling.
     console.log('Didnt Work');
     console.log(error);
-  } finally {
-    // finally.
   }
   return res.status(404).json({ message: 'Error Sending Email' });
 }
