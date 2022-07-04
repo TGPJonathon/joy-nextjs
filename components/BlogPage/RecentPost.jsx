@@ -3,15 +3,15 @@ import Link from 'next/link';
 
 import classes from './RecentPost.module.css';
 
-export default function RecentPost() {
+export default function RecentPost({ post }) {
   return (
     <article className={classes.recentPost}>
       <section className={classes.leftSide}>
         <div className={classes.postImage}>
-          <Link href="https://www.google.com">
+          <Link href={`/blog/${post.id}`}>
             <a>
               <Image
-                src="/test-picture.jpg"
+                src={post.attributes.Image.data.attributes.url}
                 height={500}
                 width={650}
                 alt="picture"
@@ -21,17 +21,15 @@ export default function RecentPost() {
         </div>
       </section>
       <section className={classes.rightSide}>
-        <p className={classes.postTitle}>Test Title For This Post</p>
+        <p className={classes.postTitle}>{post.attributes.Title}</p>
         <p className={classes.author}>
-          by Joy <span>&#183;</span> <span>Days ago</span>
+          by Joy <span>&#183;</span>
+          <span>{new Date(post.attributes.publishedAt).toDateString()}</span>
         </p>
         <p className={classes.postDescription}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel
-          inventore in, aliquid adipisci hic dolor eaque ab voluptatibus tenetur
-          ullam nihil eius nam exercitationem magni perferendis aspernatur.
-          Perspiciatis, quisquam provident?
+          {post.attributes.Content.slice(0, 30)}...
         </p>
-        <Link href="https://google.com">
+        <Link href={`/blog/${post.id}`}>
           <a className={classes.link}>Keep Reading</a>
         </Link>
       </section>

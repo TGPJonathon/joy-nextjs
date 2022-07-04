@@ -13,12 +13,9 @@ export default function StoreItems({ items }) {
           <Link key={index} href={`/store/${item.id}`}>
             <a>
               <StoreElement
-                // image={`${attributes.Image.data.attributes.url}`}
-                // title={attributes.Name}
-                // price={`$${attributes.Price}`}
-                image={item.image}
-                title={item.title}
-                price={`$${item.price}`}
+                image={`${attributes.Image.data.attributes.url}`}
+                title={attributes.Name}
+                price={`$${attributes.Price}`}
               />
             </a>
           </Link>

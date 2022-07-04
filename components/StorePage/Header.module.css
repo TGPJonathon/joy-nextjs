@@ -5,6 +5,7 @@
 .image1,
 .image2 {
   filter: brightness(60%);
+  width: 100%;
 }
 
 .image1 span,
@@ -87,5 +88,20 @@
   .headerTextUnder {
     max-width: 400px;
     text-align: center;
+  }
+}
+
+@media (max-height: 900px) {
+  .image1 span,
+  .image2 img,
+  .image2 span,
+  .image2 img {
+    height: 1000px !important;
+  }
+}
+
+@media (max-width: 300px) {
+  .headerText {
+    font-size: 3rem;
   }
 }

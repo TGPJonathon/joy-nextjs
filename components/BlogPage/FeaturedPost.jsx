@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 import classes from './FeaturedPost.module.css';
 
-export default function FeaturedPost() {
+export default function FeaturedPost({ post }) {
   return (
     <section className={classes.featuredPost}>
-      <Link href="https://google.com">
+      <Link href={`/blog/${post.id}`}>
         <div className={classes.image}>
           <Image
-            src="/test-picture.jpg"
+            src={post.attributes.Image.data.attributes.url}
             height={2000}
             width={2000}
             alt="picture"
@@ -20,21 +20,18 @@ export default function FeaturedPost() {
       <div className={classes.flex}>
         <div className={classes.text}>
           <p className={classes.featured}>Featured Blog Post</p>
-          <Link href="https://google.com">
-            <a className={classes.title}>
-              Title With Some Name But I don&apos;t Really have one at the
-              moment
-            </a>
+          <Link href={`/blog/${post.id}`}>
+            <a className={classes.title}>{post.attributes.Title}</a>
           </Link>
 
-          <p>Published on this date</p>
-          <p className={classes.description}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
-            inventore ipsa perferendis obcaecati nesciunt, rem dicta. Cumque
-            maxime quos at ducimus ipsa aliquid facere laboriosam inventore
-            facilis, adipisci, corrupti tenetur.
+          <p>
+            Published <span> </span>
+            <span>{new Date(post.attributes.publishedAt).toDateString()}</span>
           </p>
-          <Link href="https://google.com">
+          <p className={classes.description}>
+            {post.attributes.Content.slice(0, 30)}...
+          </p>
+          <Link href={`/blog/${post.id}`}>
             <a className={classes.button}>View Post</a>
           </Link>
         </div>

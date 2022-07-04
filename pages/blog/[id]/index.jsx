@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Loader from '../../../components/Loader/Loader';
 import Posts from '../../../components/BlogPage/Posts';
 
 export default function Blog({ imageSrc, title, content }) {

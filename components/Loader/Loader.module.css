@@ -1,0 +1,38 @@
+.background {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 10;
+  background-color: black;
+}
+
+.spinner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  z-index: 10;
+  color: white;
+}
+
+.text {
+  font-size: 3rem;
+}
+
+.cog {
+  animation: rotate 2s linear infinite;
+  width: 48px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,4 +1,4 @@
-import { Fragment, useEffect } from 'react';
+import { Fragment } from 'react';
 
 import Hero from '../components/HomePage/Hero/Hero';
 

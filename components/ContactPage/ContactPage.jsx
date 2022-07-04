@@ -18,7 +18,7 @@ export default function ContactPage() {
         />
       </section>
       <ParallaxBanner
-        layers={[{ image: '/joy/joy5.webp', speed: -20 }]}
+        layers={[{ image: '/joy/joy5.webp', speed: -40 }]}
         className={classes.mobile}
       />
     </Fragment>

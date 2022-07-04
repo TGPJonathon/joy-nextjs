@@ -17,3 +17,9 @@
   align-self: flex-start;
   font-size: 2rem;
 }
+
+@media (max-width: 300px) {
+  .recentPosts__margins {
+    padding: 0 0em;
+  }
+}

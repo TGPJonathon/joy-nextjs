@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Header from '../../../components/StorePage/Header';
 import ItemPage from '../../../components/StorePage/ItemPage';
 
 export default function Store({ item }) {
@@ -7,15 +8,14 @@ export default function Store({ item }) {
 
   return (
     <Fragment>
-      <main>
-        <ItemPage
-          id={data.id}
-          image={`${attributes.Image.data.attributes.url}`}
-          name={attributes.Name}
-          price={`$${attributes.Price}`}
-          description={attributes.Description}
-        />
-      </main>
+      <Header numItems={'single'} />
+      <ItemPage
+        id={data.id}
+        image={`${attributes.Image.data.attributes.url}`}
+        name={attributes.Name}
+        price={`$${attributes.Price}`}
+        description={attributes.Description}
+      />
     </Fragment>
   );
 }

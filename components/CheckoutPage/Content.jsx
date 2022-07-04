@@ -100,7 +100,7 @@ export default function Content({ cart, numItems, setCart }) {
                       key={index}
                       name={title}
                       id={title}
-                      value={num}
+                      defaultValue={num}
                     />
                   );
                 })}

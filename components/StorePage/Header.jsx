@@ -4,7 +4,7 @@ import ChevronDown from '../../public/icons/chevron_down.svg';
 
 import classes from './Header.module.css';
 
-export default function Header() {
+export default function Header({ numItems }) {
   const scrollIntoView = (area) => {
     const eventSection = document.querySelector(area);
     eventSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -30,19 +30,22 @@ export default function Header() {
           />
         </div>
       </div>
-      <div className={classes.headerTextContainer}>
-        <p className={classes.headerText}>Merch</p>
-        <p className={classes.headerTextUnder}>
-          Thank you for being here! I hope you find something you like
-        </p>
-        <div
-          onClick={() => scrollIntoView('#storeItems')}
-          className={classes.chevron}
-        >
-          <p>Scroll Down To Items</p>
-          <ChevronDown />
+
+      {numItems === 'all' && (
+        <div className={classes.headerTextContainer}>
+          <p className={classes.headerText}>Merch</p>
+          <p className={classes.headerTextUnder}>
+            Thank you for being here! I hope you find something you like
+          </p>
+          <div
+            onClick={() => scrollIntoView('#storeItems')}
+            className={classes.chevron}
+          >
+            <p>Scroll Down To Items</p>
+            <ChevronDown />
+          </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }

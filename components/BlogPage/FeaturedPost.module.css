@@ -31,7 +31,7 @@
   margin: 2em 1em;
   width: 1000px;
   max-width: 100%;
-  min-width: 350px;
+  min-width: 250px;
   padding: 1em 1em;
 }
 
@@ -60,4 +60,10 @@
   padding: 0 0;
   font-size: 16px;
   color: white;
+}
+
+@media (max-width: 500px) {
+  .featuredPost {
+    height: 70vh;
+  }
 }

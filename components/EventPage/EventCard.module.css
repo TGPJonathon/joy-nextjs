@@ -68,3 +68,10 @@
   margin: 1em 1em;
   border-radius: 10px;
 }
+
+@media (max-width: 300px) {
+  .eventCard {
+    width: 250px;
+    height: 250px;
+  }
+}

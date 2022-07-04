@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { Fragment, useState, useContext } from 'react';
 import AppContext from '../../AppContext';
-import Parallax from '../Parallax/Parallax';
 import Popup from '../Popup/Popup';
 import classes from './ItemPage.module.css';
 
@@ -29,7 +28,6 @@ export default function ItemPage({ image, name, price, description, id }) {
 
   return (
     <Fragment>
-      <Parallax image="/temp-contact2.jpg" text="Merch" />
       <section className={classes.flex}>
         <div className={classes.image}>
           <Image src={image} alt="test" height={800} width={800} />
@@ -68,7 +66,11 @@ export default function ItemPage({ image, name, price, description, id }) {
           </button>
         </div>
       </section>
-      {itemAdded && <Popup image={image} name={name} price={price} />}
+      {itemAdded && (
+        <div className={classes.mobile}>
+          <Popup image={image} name={name} price={price} />
+        </div>
+      )}
     </Fragment>
   );
 }

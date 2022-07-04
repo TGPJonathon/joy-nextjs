@@ -1,6 +1,13 @@
 .flex {
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  padding: 2em;
 }
 
 .banner {
@@ -27,6 +34,10 @@
   align-self: center;
 }
 
+.image img {
+  border: solid 5px white !important;
+}
+
 .name {
   font-size: 26px;
   font-weight: 600;
@@ -38,7 +49,9 @@
 }
 
 .text {
-  max-width: clamp(500px, 50vw, 1000px);
+  max-width: clamp(500px, 50vw, 800px);
+  color: white;
+  font-weight: 500;
 }
 
 .description {
@@ -49,6 +62,8 @@
 .label {
   margin-bottom: 0.5em;
   align-self: center;
+  color: white;
+  font-weight: 600;
 }
 
 .select {
@@ -62,10 +77,40 @@
   max-width: 450px;
   align-self: center;
   margin: 2em 0;
+  color: black;
+  border-color: white;
+  background-color: white;
 }
 
 @media (max-width: 750px) {
   .flex {
     flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .image {
+    padding: 0 2em;
+  }
+
+  .info {
+    padding: 0 2em;
+  }
+
+  .mobile {
+    position: absolute;
+    margin-top: 2em;
+    z-index: 12;
+  }
+}
+
+@media (max-width: 500px) {
+  .flex {
+    display: block;
+  }
+}
+
+@media (max-width: 300px) {
+  .select {
+    width: 200px;
   }
 }
