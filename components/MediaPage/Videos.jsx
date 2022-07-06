@@ -13,12 +13,12 @@ export default function Videos() {
   const videosInfo = [
     [
       'y0DA6BhUqA8',
-      '/joy/here_lies_the_heavens.jpg',
+      'here_lies_the_heavens.webp',
       'Here Lies The Heavens',
       'Random Text',
     ],
-    ['8-A_CcAa5Ps', '/joy/joy2.jpeg', 'Second Hand Smoke', 'More Random Text'],
-    ['jHhWm7ILnb0', '/joy/fine_dining.jpg', 'Fine Dining', 'Random Random'],
+    ['8-A_CcAa5Ps', 'joy2.webp', 'Second Hand Smoke', 'More Random Text'],
+    ['jHhWm7ILnb0', 'fine_dining.webp', 'Fine Dining', 'Random Random'],
   ];
 
   return (
@@ -35,7 +35,12 @@ export default function Videos() {
               }}
               className={classes.video}
             >
-              <Image src={`${video[1]}`} height={500} width={500} alt="poem" />
+              <Image
+                src={`https://strapi-joy.s3.amazonaws.com/${video[1]}`}
+                height={500}
+                width={500}
+                alt="poem"
+              />
               <div className={classes.area}>
                 <div className={classes.icon}>
                   <Play />

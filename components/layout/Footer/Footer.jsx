@@ -8,10 +8,16 @@ export default function Footer() {
   const emailHandler = async (e) => {
     const response = await fetch('/api/email', {
       method: 'POST',
-      body: JSON.stringify(e.target[0].value),
+
+      body: JSON.stringify({
+        name: e.target[0].value,
+        email: e.target[1].value,
+        message: e.target[2].value,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
     });
-    const data = await response.json();
-    console.log(data);
   };
 
   return (
@@ -28,7 +34,7 @@ export default function Footer() {
           <div className={classes.margin}>
             <Mail />
           </div>
-          <div>ganggang@gmail.com</div>
+          <div>temporary@gmail.com</div>
         </div>
       </section>
       <section className={classes.space}>
@@ -46,6 +52,7 @@ export default function Footer() {
             onSubmit={(e) => {
               e.preventDefault();
               emailHandler(e);
+              document.querySelector('#email').value = '';
             }}
           >
             <input
@@ -56,6 +63,20 @@ export default function Footer() {
               id="email"
               minLength="8"
               required
+            />
+            <input
+              style={{ display: 'none' }}
+              type="text"
+              name="name"
+              id="name"
+              defaultValue="Email"
+            />
+            <input
+              style={{ display: 'none' }}
+              type="text"
+              name="message"
+              id="message"
+              defaultValue="Someone sent you their email through the footer"
             />
             <button type="submit" className={classes.button}>
               Send!

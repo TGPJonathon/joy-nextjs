@@ -37,7 +37,7 @@
 
 .featured {
   text-transform: uppercase;
-  color: green;
+  color: coral;
   font-weight: 800;
   font-size: clamp(1rem, 2vw, 2rem);
   margin: 0 0;

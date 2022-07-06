@@ -1,10 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import SocialLinks from '../SocialLinks/SocialLinks';
 import classes from './Posts.module.css';
-import Recent from './Recent';
 
-export default function Posts({ content }) {
+export default function Posts({ post }) {
+  const { data } = post;
+
   return (
     <article className={classes.background}>
       <div className={classes.post}>
@@ -27,18 +29,20 @@ export default function Posts({ content }) {
             <div className={classes.post__info__text}>
               <p className={classes.joy}>Joy</p>
               <p> &#8226;</p>
-              <p className={classes.date}>Mar 2, 2022</p>
+              <p className={classes.date}>
+                {new Date(data.attributes.publishedAt).toDateString()}
+              </p>
               <p> &#8226;</p>
               <p className={classes.time}>5 min read</p>
             </div>
           </div>
           <div className={classes.title}>
-            <h1>Interview with Joy</h1>
+            <h1>{data.attributes.Title}</h1>
           </div>
           <div className={classes.author}>by Joy Angelica</div>
           <div className={classes.image}>
             <Image
-              src="/test-picture3.jpg"
+              src={data.attributes.Image.data.attributes.url}
               alt="test"
               height={400}
               width={400}
@@ -46,20 +50,15 @@ export default function Posts({ content }) {
           </div>
         </section>
         <section className={classes.content}>
-          <p className={classes.content__text}>{content}</p>
+          <p className={classes.content__text}>{data.attributes.Content}</p>
         </section>
         <section className={classes.socials}>
-          <SocialLinks />
-        </section>
-        <section className={classes.recent}>
-          <div className={classes.recent__top}>
-            <h3>Recent Posts</h3> <p>See all</p>
+          <div>
+            <SocialLinks />
           </div>
-          <div className={classes.recent_posts}>
-            <Recent />
-            <Recent />
-            <Recent />
-          </div>
+          <Link href="/blog">
+            <button className={classes.seeAll}>See all posts</button>
+          </Link>
         </section>
       </div>
     </article>

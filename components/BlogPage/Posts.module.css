@@ -68,31 +68,24 @@
   line-height: 2em;
   font-size: clamp(0.9rem, 1vw, 1.3rem);
   text-align: justify;
+  white-space: pre-wrap;
 }
 
 .socials {
   border-top: solid 1px grey;
   border-bottom: solid 1px grey;
   padding: 1.5em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .socials a {
   margin: 0 1em;
 }
 
-.recent {
-  margin-top: 4em;
-}
-
-.recent__top {
-  display: flex;
-  justify-content: space-between;
-}
-
-.recent_posts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.seeAll {
+  width: 200px;
 }
 
 @media (min-width: 1200px) {
@@ -120,11 +113,5 @@
 
   .time {
     width: 75px;
-  }
-}
-
-@media (max-width: 500px) {
-  .recent_posts {
-    justify-content: center;
   }
 }

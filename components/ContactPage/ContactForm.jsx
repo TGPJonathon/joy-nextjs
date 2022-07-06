@@ -1,6 +1,6 @@
 import classes from './ContactForm.module.css';
 
-export default function ContactForm() {
+export default function ContactForm({ tryEmail }) {
   const emailHandler = async (e) => {
     const response = await fetch('/api/email', {
       method: 'POST',
@@ -14,8 +14,7 @@ export default function ContactForm() {
         'Content-Type': 'application/json',
       },
     });
-    const data = await response.json();
-    console.log(data);
+    tryEmail(response.status);
   };
 
   return (

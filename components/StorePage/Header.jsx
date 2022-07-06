@@ -15,18 +15,20 @@ export default function Header({ numItems }) {
       <div className={classes.flex}>
         <div className={classes.image1}>
           <Image
-            src="/joy/joy_malcolm.jpg"
+            src="https://strapi-joy.s3.amazonaws.com/joy_malcolm.webp"
             alt="temp"
             height={1500}
             width={1500}
+            priority={true}
           />
         </div>
         <div className={classes.image2}>
           <Image
-            src="/joy/joy_reading.jpg"
+            src="https://strapi-joy.s3.amazonaws.com/joy_reading.webp"
             alt="temp"
             height={1500}
             width={1500}
+            priority={true}
           />
         </div>
       </div>

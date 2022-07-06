@@ -21,6 +21,7 @@ export default function HeroComponent({
         width={2000}
         height={2000}
         style={filter ? imageBlur : ''}
+        priority={true}
       />
       {title && <h1 className={classes.title}>{title}</h1>}
     </div>

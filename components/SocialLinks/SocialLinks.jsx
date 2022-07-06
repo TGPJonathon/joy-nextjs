@@ -12,6 +12,8 @@ export default function SocialLinks() {
     <Youtube key={4} />,
   ];
 
+  const titles = ['Facebook', 'Instagram', 'Twitter', 'Youtube'];
+
   const links = [
     'https://www.facebook.com/JoyfulSoSunnyAnjelica',
     'https://www.instagram.com/accounts/login/?next=/joyanjelica/',
@@ -28,6 +30,7 @@ export default function SocialLinks() {
             rel="noopener noreferrer"
             key={index}
             href={links[index]}
+            title={titles[index]}
           >
             {social}
           </a>

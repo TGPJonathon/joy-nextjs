@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className={classes.container}>
       <HeroComponent
-        imageSrc="/joy/joy1.jpeg"
+        imageSrc="https://strapi-joy.s3.amazonaws.com/joy1.jpeg"
         alt="black woman"
         pictureClass="background_picture"
       />

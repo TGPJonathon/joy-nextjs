@@ -1,44 +1,19 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment } from 'react';
 
 import FeaturedPost from '../../components/BlogPage/FeaturedPost';
 import RecentPost from '../../components/BlogPage/RecentPost';
 import RecentPostsContainer from '../../components/BlogPage/RecentPostsContainer';
 import Loader from '../../components/Loader/Loader';
 
-export default function Blog() {
-  const [posts, setPosts] = useState([]);
-  const [featuredPost, setFeaturedPost] = useState(null);
-
-  const getPosts = async () => {
-    const response = await fetch(
-      'https://api.joyangelica.com/api/blogs?populate=*'
-    );
-    const posts = await response.json();
-
-    const featured = posts.data.reduce((a, b) =>
-      new Date(a.attributes.publishedAt) > new Date(b.attributes.publishedAt)
-        ? a
-        : b
-    );
-    setFeaturedPost(featured);
-
-    const otherPosts = posts.data.filter(
-      (feature) => feature.id !== featured.id
-    );
-    setPosts(otherPosts);
-  };
-
-  useEffect(() => {
-    getPosts();
-  }, []);
-
-  if (featuredPost) {
+export default function Blog({ featured, otherPosts }) {
+  if (featured) {
     return (
       <Fragment>
-        <FeaturedPost post={featuredPost} />
+        <FeaturedPost post={featured} />
         <RecentPostsContainer>
-          {posts.map((post, index) => {
-            return <RecentPost key={index} post={post} />;
+          {otherPosts.length === 0 && <p>No Posts At the Moment</p>}
+          {otherPosts.map((post, index) => {
+            return <RecentPost key={index} postNum={index} post={post} />;
           })}
         </RecentPostsContainer>
       </Fragment>
@@ -46,4 +21,26 @@ export default function Blog() {
   }
 
   return <Loader />;
+}
+
+export async function getStaticProps() {
+  const result = await fetch(
+    'https://api.joyangelica.com/api/blogs?populate=*'
+  );
+  const posts = await result.json();
+
+  const featured = posts.data.reduce((a, b) =>
+    new Date(a.attributes.publishedAt) > new Date(b.attributes.publishedAt)
+      ? a
+      : b
+  );
+
+  const otherPosts = posts.data.filter((feature) => feature.id !== featured.id);
+
+  return {
+    props: {
+      featured,
+      otherPosts,
+    },
+  };
 }

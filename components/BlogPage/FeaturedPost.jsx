@@ -13,6 +13,7 @@ export default function FeaturedPost({ post }) {
             height={2000}
             width={2000}
             alt="picture"
+            priority={true}
           />
         </div>
       </Link>

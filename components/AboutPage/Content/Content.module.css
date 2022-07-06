@@ -97,19 +97,22 @@
 
 .bottom_bottom {
   height: 40vh;
-  background-color: #e27802;
+  background-color: white;
   display: flex;
 }
 
-.bottom_bottom__title {
+.bottom_bottom__text {
   margin: 0 0;
   text-align: center;
-  padding-top: 1em;
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  padding: 1em 1em;
+  font-size: clamp(0.87rem, 1vw, 1.4rem);
+  align-self: center;
+  line-height: 1.7em;
 }
 
 .bottom_bottom__left {
   width: 50%;
+  display: flex;
 }
 
 .cards {

@@ -1,0 +1,27 @@
+.background {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 20;
+  animation: slide-right 1s;
+}
+
+.success {
+  background-color: #77dd77;
+  padding: 2em 2em;
+  border-radius: 10px;
+}
+
+@keyframes slide-right {
+  from {
+    left: -880px;
+  }
+  to {
+    left: 0px;
+  }
+}

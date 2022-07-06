@@ -17,7 +17,13 @@ export default function Content() {
         <section className={classes.flex}>
           <div className={classes.landing}>
             <div className={classes.image}>
-              <Image src="/joy/test.jpg" alt="joy" height={2500} width={2500} />
+              <Image
+                src="https://strapi-joy.s3.amazonaws.com/test.webp"
+                alt="joy"
+                height={2500}
+                width={2500}
+                priority={true}
+              />
             </div>
             <div className={classes.interest}>
               <p className={classes.landingTitle}>Come Out To A Show</p>

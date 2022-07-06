@@ -2,14 +2,6 @@ import MobileNavLink from './MobileNavLink';
 
 import CheckoutCart from '../../CheckoutCart/CheckoutCart';
 
-import Calendar from '/public/icons/calendar.svg';
-import Camera from '/public/icons/camera.svg';
-import CreditCard from '/public/icons/creditcard.svg';
-import Home from '/public/icons/home.svg';
-import Pencil from '/public/icons/pencil.svg';
-import Person from '/public/icons/person.svg';
-import Phone2 from '/public/icons/phone2.svg';
-
 import classes from './MobileNavMenu.module.css';
 
 export default function MobileNavMenu({ toggleMenu, numItems }) {
@@ -23,67 +15,42 @@ export default function MobileNavMenu({ toggleMenu, numItems }) {
         </button>
         <ul className={classes.navlist}>
           <li className={classes.link_width}>
-            <MobileNavLink
-              onClick={toggleMenu}
-              page="/"
-              svg={<Home />}
-              text="Home"
-            />
+            <MobileNavLink onClick={toggleMenu} page="/" text="Home" />
           </li>
           <li className={classes.link_width}>
-            <MobileNavLink
-              onClick={toggleMenu}
-              page="/about"
-              svg={<Person />}
-              text="About"
-            />
+            <MobileNavLink onClick={toggleMenu} page="/about" text="About" />
           </li>
           <li className={classes.link_width}>
-            <MobileNavLink
-              onClick={toggleMenu}
-              page="/events"
-              svg={<Calendar />}
-              text="Events"
-            />
+            <MobileNavLink onClick={toggleMenu} page="/events" text="Events" />
           </li>
           <li className={classes.link_width}>
-            <MobileNavLink
-              onClick={toggleMenu}
-              page="/blog"
-              svg={<Pencil />}
-              text="Blog"
-            />
+            <MobileNavLink onClick={toggleMenu} page="/blog" text="Blog" />
           </li>
           <li className={classes.link_width}>
             <MobileNavLink
               onClick={toggleMenu}
               page="/contact"
-              svg={<Phone2 />}
               text="Contact"
             />
           </li>
           <li className={classes.link_width}>
-            <MobileNavLink
-              onClick={toggleMenu}
-              page="/media"
-              svg={<Camera />}
-              text="Media"
-            />
+            <MobileNavLink onClick={toggleMenu} page="/media" text="Media" />
           </li>
           <li className={classes.link_width}>
-            <MobileNavLink
-              onClick={toggleMenu}
-              page="/store"
-              svg={<CreditCard />}
-              text="Store"
-            />
+            <MobileNavLink onClick={toggleMenu} page="/store" text="Store" />
           </li>
           <li className={classes.link_width}>
             <MobileNavLink
               onClick={toggleMenu}
               page="/checkout"
               svg={
-                <CheckoutCart mobile={false} quantity={numItems} menu={true} />
+                numItems > 0 && (
+                  <CheckoutCart
+                    mobile={false}
+                    quantity={numItems}
+                    menu={true}
+                  />
+                )
               }
               text="Checkout"
             />
