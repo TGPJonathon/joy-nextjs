@@ -36,7 +36,7 @@ export default function Videos() {
               className={classes.video}
             >
               <Image
-                src={`https://strapi-joy.s3.amazonaws.com/${video[1]}`}
+                src={`https://d2dw0u3k29fc6y.cloudfront.net/${video[1]}`}
                 height={500}
                 width={500}
                 alt="poem"

@@ -18,7 +18,7 @@ export default function Content() {
           <div className={classes.landing}>
             <div className={classes.image}>
               <Image
-                src="https://strapi-joy.s3.amazonaws.com/test.webp"
+                src="https://d2dw0u3k29fc6y.cloudfront.net/test.webp"
                 alt="joy"
                 height={2500}
                 width={2500}

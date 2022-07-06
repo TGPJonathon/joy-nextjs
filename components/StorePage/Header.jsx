@@ -15,7 +15,7 @@ export default function Header({ numItems }) {
       <div className={classes.flex}>
         <div className={classes.image1}>
           <Image
-            src="https://strapi-joy.s3.amazonaws.com/joy_malcolm.webp"
+            src="https://d2dw0u3k29fc6y.cloudfront.net/joy_malcolm.webp"
             alt="temp"
             height={1500}
             width={1500}
@@ -24,7 +24,7 @@ export default function Header({ numItems }) {
         </div>
         <div className={classes.image2}>
           <Image
-            src="https://strapi-joy.s3.amazonaws.com/joy_reading.webp"
+            src="https://d2dw0u3k29fc6y.cloudfront.net/joy_reading.webp"
             alt="temp"
             height={1500}
             width={1500}

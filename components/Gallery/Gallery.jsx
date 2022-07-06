@@ -18,13 +18,15 @@ export default function Gallery() {
           <div
             onClick={() => {
               setShowModal(true);
-              setCurrentPicture(`/media/${image}.webp`);
+              setCurrentPicture(
+                `https://d2dw0u3k29fc6y.cloudfront.net/${image}.webp`
+              );
             }}
             className={classes.expand}
             key={index}
           >
             <Image
-              src={`/media/${image}.webp`}
+              src={`https://d2dw0u3k29fc6y.cloudfront.net/${image}.webp`}
               alt="temp"
               height={500}
               width={500}

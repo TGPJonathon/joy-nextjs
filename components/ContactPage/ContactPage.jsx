@@ -26,7 +26,7 @@ export default function ContactPage() {
         <ParallaxBanner
           layers={[
             {
-              image: 'https://strapi-joy.s3.amazonaws.com/joy5.webp',
+              image: 'https://d2dw0u3k29fc6y.cloudfront.net/joy5.webp',
               speed: -50,
             },
           ]}
@@ -36,7 +36,7 @@ export default function ContactPage() {
       <ParallaxBanner
         layers={[
           {
-            image: 'https://strapi-joy.s3.amazonaws.com/joy5.webp',
+            image: 'https://d2dw0u3k29fc6y.cloudfront.net/joy5.webp',
             speed: -40,
           },
         ]}

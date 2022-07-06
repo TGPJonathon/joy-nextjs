@@ -17,7 +17,7 @@ export default function Content() {
             <ParallaxBanner
               layers={[
                 {
-                  image: 'https://strapi-joy.s3.amazonaws.com/joy7.webp',
+                  image: 'https://d2dw0u3k29fc6y.cloudfront.net/joy7.webp',
                   speed: -50,
                 },
               ]}
@@ -39,12 +39,12 @@ export default function Content() {
             </p>
             <p>
               My debut collection of poetry, Growing Pains, was published in
-              2020 at the beginning of the current global pandemic. I'm the
-              Founder of Oxon Hill High School's Slam Team, founder of MSUPoets,
-              and former member of both the Baltimore City Youth Poetry Slam
-              Team and Words Beats and Life Youth Poetry Slam Teams. I try to
-              explore art not only through writing but through multi-media
-              production and content creation.
+              2020 at the beginning of the current global pandemic. I&apos;m the
+              Founder of Oxon Hill High School&apos;s Slam Team, founder of
+              MSUPoets, and former member of both the Baltimore City Youth
+              Poetry Slam Team and Words Beats and Life Youth Poetry Slam Teams.
+              I try to explore art not only through writing but through
+              multi-media production and content creation.
             </p>
           </div>
           <div className={classes.middle__right}></div>
@@ -55,7 +55,7 @@ export default function Content() {
             <ParallaxBanner
               layers={[
                 {
-                  image: 'https://strapi-joy.s3.amazonaws.com/protest.jpg',
+                  image: 'https://d2dw0u3k29fc6y.cloudfront.net/protest.jpg',
                   speed: -50,
                 },
               ]}
@@ -67,14 +67,14 @@ export default function Content() {
               My creative portfolio explores themes of womanhood, hip-hop,
               blackness, love, mental health, substance abuse, and race
               relations, utilizing a multitude of creative lenses. I began my
-              poetry career in 2013, and I've won multiple awards including DC
-              Youth Slam's MC Olympics in 2014, 3rd Place in Baltimore's Grand
-              Slam Championship in 2016, and is a former Baltimore City Youth
-              Poetry Ambassador (2015). I'm also a NAACP ACT-SO finalist
-              receiving silver and bronze medals for poetry and oratory (2015).
-              I've competed 2xs at the Brave New Voices international poetry
-              slam, consecutively performing on the final stage both years I was
-              in the competition.
+              poetry career in 2013, and I&apos;ve won multiple awards including
+              DC Youth Slam&apos;s MC Olympics in 2014, 3rd Place in
+              Baltimore&apos;s Grand Slam Championship in 2016, and is a former
+              Baltimore City Youth Poetry Ambassador (2015). I&apos;m also a
+              NAACP ACT-SO finalist receiving silver and bronze medals for
+              poetry and oratory (2015). I&apos;ve competed 2xs at the Brave New
+              Voices international poetry slam, consecutively performing on the
+              final stage both years I was in the competition.
             </span>
           </div>
         </section>
@@ -86,20 +86,20 @@ export default function Content() {
               all mediums, hosting open mics, hip hop cyphers, workshops, and
               artist showcases. I was also previously the mid-Atlantic region
               Mawa Scribes champion (2016) and have featured at many notable
-              venues such as DC's Kennedy Theater, The Arc Theater, and Bus Boys
-              and Poets. I view art as a vehicle for change and social justice
-              through entertaining and also educating audiences. ​I currently
-              works as a program manager and social media coordinator in the
-              public health field concentrating on substance use and sexual
-              reproductive health for the Baltimore City Health Department and
-              ETR.
+              venues such as DC&apos;s Kennedy Theater, The Arc Theater, and Bus
+              Boys and Poets. I view art as a vehicle for change and social
+              justice through entertaining and also educating audiences. ​I
+              currently works as a program manager and social media coordinator
+              in the public health field concentrating on substance use and
+              sexual reproductive health for the Baltimore City Health
+              Department and ETR.
             </p>
           </div>
           <div className={classes.image}>
             <ParallaxBanner
               layers={[
                 {
-                  image: 'https://strapi-joy.s3.amazonaws.com/test.webp',
+                  image: 'https://d2dw0u3k29fc6y.cloudfront.net/test.webp',
                   speed: -50,
                 },
               ]}
