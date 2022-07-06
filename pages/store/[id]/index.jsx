@@ -5,13 +5,16 @@ import ItemPage from '../../../components/StorePage/ItemPage';
 export default function Store({ item }) {
   const { data } = item;
   const { attributes } = data;
+  const imageUrl = data.attributes.Image.data.attributes.url.split(
+    'https://strapi-joy.s3.amazonaws.com/'
+  )[1];
 
   return (
     <Fragment>
       <Header numItems={'single'} />
       <ItemPage
         id={data.id}
-        image={`${attributes.Image.data.attributes.url}`}
+        image={`https://d2dw0u3k29fc6y.cloudfront.net/${imageUrl}`}
         name={attributes.Name}
         price={`$${attributes.Price}`}
         description={attributes.Description}

@@ -4,12 +4,16 @@ import Link from 'next/link';
 import classes from './FeaturedPost.module.css';
 
 export default function FeaturedPost({ post }) {
+  const imageUrl = post.attributes.Image.data.attributes.url.split(
+    'https://strapi-joy.s3.amazonaws.com/'
+  )[1];
+
   return (
     <section className={classes.featuredPost}>
       <Link href={`/blog/${post.id}`}>
         <div className={classes.image}>
           <Image
-            src={post.attributes.Image.data.attributes.url}
+            src={`https://d2dw0u3k29fc6y.cloudfront.net/${imageUrl}`}
             height={2000}
             width={2000}
             alt="picture"
