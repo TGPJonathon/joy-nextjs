@@ -6,6 +6,9 @@ import classes from './Posts.module.css';
 
 export default function Posts({ post }) {
   const { data } = post;
+  const imageUrl = data.attributes.Image.data.attributes.url.split(
+    'https://strapi-joy.s3.amazonaws.com/'
+  )[1];
 
   return (
     <article className={classes.background}>
@@ -42,7 +45,7 @@ export default function Posts({ post }) {
           <div className={classes.author}>by Joy Angelica</div>
           <div className={classes.image}>
             <Image
-              src={data.attributes.Image.data.attributes.url}
+              src={`https://d2dw0u3k29fc6y.cloudfront.net/${imageUrl}`}
               alt="test"
               height={400}
               width={400}
