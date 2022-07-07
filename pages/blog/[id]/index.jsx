@@ -1,9 +1,14 @@
 import { Fragment } from 'react';
+import Head from 'next/head';
 import Posts from '../../../components/BlogPage/Posts';
 
 export default function Blog({ item }) {
   return (
     <Fragment>
+      <Head>
+        <title>Thoughts</title>
+        <meta name="description" content="My Thoughts" />
+      </Head>
       <Posts post={item} />
     </Fragment>
   );

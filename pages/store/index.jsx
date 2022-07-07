@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Head from 'next/head';
 import Header from '../../components/StorePage/Header.jsx';
 import StoreItems from '../../components/StorePage/StoreItems';
 
@@ -7,6 +8,10 @@ export default function Store({ items }) {
 
   return (
     <Fragment>
+      <Head>
+        <title>Merch</title>
+        <meta name="description" content="Are you ready to buy?" />
+      </Head>
       <Header numItems={'all'} />
       <StoreItems items={data} />
     </Fragment>

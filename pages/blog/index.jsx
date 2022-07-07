@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import Head from 'next/head';
 
 import FeaturedPost from '../../components/BlogPage/FeaturedPost';
 import RecentPost from '../../components/BlogPage/RecentPost';
@@ -9,6 +10,10 @@ export default function Blog({ featured, otherPosts }) {
   if (featured) {
     return (
       <Fragment>
+        <Head>
+          <title>Blog</title>
+          <meta name="description" content="Come Read Some of My Thoughts" />
+        </Head>
         <FeaturedPost post={featured} />
         <RecentPostsContainer>
           {otherPosts.length === 0 && <p>No Posts At the Moment</p>}
