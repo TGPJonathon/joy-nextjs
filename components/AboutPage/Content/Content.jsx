@@ -18,7 +18,7 @@ export default function Content() {
               layers={[
                 {
                   image: 'https://d2dw0u3k29fc6y.cloudfront.net/joy7.webp',
-                  speed: -50,
+                  speed: -20,
                 },
               ]}
               className={classes.banner}
@@ -56,7 +56,7 @@ export default function Content() {
               layers={[
                 {
                   image: 'https://d2dw0u3k29fc6y.cloudfront.net/protest.jpg',
-                  speed: -50,
+                  speed: -20,
                 },
               ]}
               className={classes.banner}
@@ -100,7 +100,7 @@ export default function Content() {
               layers={[
                 {
                   image: 'https://d2dw0u3k29fc6y.cloudfront.net/test.webp',
-                  speed: -50,
+                  speed: -20,
                 },
               ]}
               className={classes.banner}
