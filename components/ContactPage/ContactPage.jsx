@@ -27,7 +27,7 @@ export default function ContactPage() {
           layers={[
             {
               image: 'https://d2dw0u3k29fc6y.cloudfront.net/joy5.webp',
-              speed: -50,
+              speed: -20,
             },
           ]}
           className={classes.banner}
@@ -37,7 +37,7 @@ export default function ContactPage() {
         layers={[
           {
             image: 'https://d2dw0u3k29fc6y.cloudfront.net/joy5.webp',
-            speed: -40,
+            speed: -20,
           },
         ]}
         className={classes.mobile}
