@@ -78,7 +78,7 @@ export default function Footer() {
               defaultValue="Someone sent you their email through the footer"
             />
             <button type="submit" className={classes.button}>
-              Send!
+              Send
             </button>
           </form>
         </div>
