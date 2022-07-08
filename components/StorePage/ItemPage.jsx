@@ -19,7 +19,6 @@ export default function ItemPage({ image, name, price, description, id }) {
       image: image,
     };
     value.setCart({ ...value.cart, ...item });
-    console.log(value.cart);
     setItemAdded(true);
     setTimeout(() => {
       setItemAdded(false);

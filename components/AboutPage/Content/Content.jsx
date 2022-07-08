@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { ParallaxBanner } from 'react-scroll-parallax';
+import Image from 'next/image';
 
 import classes from './Content.module.css';
 
@@ -13,15 +13,13 @@ export default function Content() {
               Hello! My name is Joy, and I got a lot to talk about
             </span>
           </div>
-          <div className={classes.image}>
-            <ParallaxBanner
-              layers={[
-                {
-                  image: 'https://d2dw0u3k29fc6y.cloudfront.net/joy7.webp',
-                  speed: -20,
-                },
-              ]}
-              className={classes.banner}
+          <div className={classes.testImage}>
+            <Image
+              src="https://d2dw0u3k29fc6y.cloudfront.net/joy7.webp"
+              alt="Joy Gazing"
+              width={2000}
+              height={2000}
+              priority={true}
             />
           </div>
         </section>
@@ -51,15 +49,12 @@ export default function Content() {
         </section>
 
         <section className={classes.bottom}>
-          <div className={classes.image}>
-            <ParallaxBanner
-              layers={[
-                {
-                  image: 'https://d2dw0u3k29fc6y.cloudfront.net/protest.jpg',
-                  speed: -20,
-                },
-              ]}
-              className={classes.banner}
+          <div className={classes.testImage}>
+            <Image
+              src="https://d2dw0u3k29fc6y.cloudfront.net/protest.jpg"
+              alt="Joy Gazing"
+              width={2000}
+              height={2000}
             />
           </div>
           <div className={classes.bottom__right}>
@@ -95,15 +90,12 @@ export default function Content() {
               Department and ETR.
             </p>
           </div>
-          <div className={classes.image}>
-            <ParallaxBanner
-              layers={[
-                {
-                  image: 'https://d2dw0u3k29fc6y.cloudfront.net/test.webp',
-                  speed: -20,
-                },
-              ]}
-              className={classes.banner}
+          <div className={classes.testImage + ' ' + classes.bottomImage}>
+            <Image
+              src="https://d2dw0u3k29fc6y.cloudfront.net/test.webp"
+              alt="Joy Gazing"
+              width={2000}
+              height={2000}
             />
           </div>
         </section>

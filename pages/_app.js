@@ -1,5 +1,4 @@
 import '../styles/globals.css';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import { useState } from 'react';
 import Head from 'next/head';
 
@@ -11,24 +10,19 @@ function MyApp({ Component, pageProps }) {
   const [cart, setCart] = useState({});
 
   return (
-    <ParallaxProvider>
-      <AppContext.Provider
-        value={{
-          cart: cart,
-          setCart: setCart,
-        }}
-      >
-        <Layout>
-          <Head>
-            <meta
-              name="viewport"
-              content="width=device-width, initial-scale=1"
-            />
-          </Head>
-          <Component {...pageProps} />
-        </Layout>
-      </AppContext.Provider>
-    </ParallaxProvider>
+    <AppContext.Provider
+      value={{
+        cart: cart,
+        setCart: setCart,
+      }}
+    >
+      <Layout>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </Head>
+        <Component {...pageProps} />
+      </Layout>
+    </AppContext.Provider>
   );
 }
 

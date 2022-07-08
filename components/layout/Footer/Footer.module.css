@@ -17,6 +17,10 @@
   margin-right: 10px;
 }
 
+.stayInTouch {
+  margin-top: 0;
+}
+
 .p_flex {
   display: flex;
 }

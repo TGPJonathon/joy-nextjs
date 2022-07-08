@@ -32,6 +32,26 @@
   top: -169px !important;
 }
 
+.testImage {
+  width: 50%;
+  height: 50vh;
+}
+
+.testImage span,
+.testImage img {
+  width: 100% !important;
+  height: 50vh !important;
+}
+
+.bottomImage {
+  height: 40vh;
+}
+
+.bottomImage span,
+.bottomImage img {
+  height: 40vh !important;
+}
+
 .middle {
   height: 50vh;
 }
@@ -166,6 +186,10 @@
   .top__text__container {
     width: 100%;
     justify-content: center;
+  }
+
+  .testImage {
+    width: 100%;
   }
 
   .bottom,

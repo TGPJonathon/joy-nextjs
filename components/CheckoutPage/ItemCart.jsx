@@ -3,19 +3,11 @@ import Image from 'next/image';
 
 import classes from './ItemCart.module.css';
 
-export default function ItemCart({
-  image,
-  name,
-  price,
-  num,
-  id,
-  cart,
-  setCart,
-}) {
+export default function ItemCart({ image, name, price, num, id, setCart }) {
   const [quantity, setQuantity] = useState(num);
   const itemOptions = (
     <Fragment>
-      <p onClick={removeItem} className={classes.remove}>
+      <p onClick={() => removeItem()} className={classes.remove}>
         Remove
       </p>
       <select

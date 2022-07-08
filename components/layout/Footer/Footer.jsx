@@ -38,14 +38,13 @@ export default function Footer() {
         </div>
       </section>
       <section className={classes.space}>
-        <p>Social Media</p>
         <p>
           <SocialLinks />
         </p>
         <p>Copyright &copy; 2022&#9702;All Rights Reserved</p>
       </section>
       <section className={classes.space}>
-        <p>Stay in Touch!</p>
+        <p className={classes.stayInTouch}>Stay in Touch!</p>
         <div className={classes.form}>
           <form
             action="/api/email"
