@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Read Me First. 
+
+This was my first attempt at building a website for a friend. Originally, I wanted to build every component from scratch and code in all the functionality.
+Since then I've learned a lot about structuring projects and better practices for organization. Also that component libraries are your best friend and save lots of time.
+If I had to rewrite this, I would approach it very differently now. Especially since the landscape of React has changed so much in only a year.
+
 
 ## Getting Started
 
